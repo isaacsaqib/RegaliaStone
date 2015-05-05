@@ -1,4 +1,6 @@
 <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+
 <div id="header">
 
 	<div id="logo-box"> 
@@ -37,11 +39,59 @@
 
 <!-- Quartz Table   -->
 
-<table id="quartz-slabs">
-    <tr>
 
+
+
+
+<!-- End Quartz Page  -->
+
+
+
+<!-- Start Contact Page -->
+
+<div id='contact-div'>
+	<h1> We are available for your convenience at all times!</h1>
+	<h3>Address: </h3>
+	<h3>Phone Number:</h3>
+	<h3>Email:</h3>
+	
+
+</div>
+
+<table id="quartz-slabs">
+	<tr>
+		<td class="col">
+			<ul>
+				<li>
+					<figure>
+						<% @quarts.each do |quart| %>
+						<%= image_tag quart.avatar.url(:medium) %>
+					<figcaption>
+					<center><p>	<%=quart.name%></p><br>
+					<p><%=quart.description%><br>
+					<% end %>
+					</p>
+					</center>
+					</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+<!-- <table id="quartz-slabs">
+    <tr>
+ -->
     <!-- Column 1 -->
-        <td class="col">
+       <!--  <td class="col">
               <ul>
               	<li>
 	              	<figure>
@@ -108,10 +158,10 @@
 			
               </ul>
         </td>
-
+ -->
         <!-- Column 2 -->
 
-        <td class="col">
+        <!-- <td class="col">
         	<uL>
 				<li>
 					<figure>
@@ -176,11 +226,11 @@
 			</ul>
 				
 
-        </td>
+        </td> -->
 
         <!-- Column 3  -->
 
-        <td class="col">
+        <!-- <td class="col">
         	<ul>
         	<li>
 				<figure>
@@ -244,10 +294,10 @@
 				</li>
 			</ul>
 
-        <td>
+        <td> -->
 
         <!-- Column 4  -->
-
+<!-- 
         <td class="col">
             <ul>
 				<li>
@@ -315,22 +365,7 @@
     </tr>
 </table>
 
-<!-- End Quartz Page  -->
-
-
-
-<!-- Start Contact Page -->
-
-<div id='contact-div'>
-	<h1> We are available for your convenience at all times!</h1>
-	<h3>Address: </h3>
-	<h3>Phone Number:</h3>
-	<h3>Email:</h3>
-	
-
-</div>
-
-
+ -->
 
 <!-- <table id="granite-slabs">
     <tr>

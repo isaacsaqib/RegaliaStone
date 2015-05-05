@@ -45,3 +45,5 @@ group :development, :test do
   gem 'spring'
 end
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
