@@ -2,6 +2,10 @@ $(document).ready(function(){
 	$('#quartz-slabs').hide()
 	$('#quartz-header').hide();
 	$('#contact-div').hide();
+	$('#granites-slabs').hide();
+	$('#granites-header').hide();
+
+
 
 	// $('#box').hide()
 
@@ -11,6 +15,10 @@ $(document).ready(function(){
 			$('#quartz-slabs').fadeIn(2000)
 			$('#quartz-header').show(2000);
 			$('#contact-div').hide();
+			$('#granites-slabs').hide();
+			$('#granites-header').hide();
+
+
 
 
 
@@ -21,17 +29,24 @@ $(document).ready(function(){
 			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('#contact-div').slideDown();
-				$('#quartz-slabs').hide()
-					$('#quartz-header').hide();
+			$('#quartz-slabs').hide()
+			$('#quartz-header').hide();
+	})
 
 
-			// $('#quartz-slabs').fadeIn(2000)
-			// $('#quartz-header').show(2000);
+	$('#nav li:nth-child(3)').on('click', function(){
+			$('#box').fadeOut(100)
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('#granites-slabs').fadeIn(2000)
+			$('#granites-header').fadeIn(2000);
+			$('#quartz-header').hide();
+			$('#quartz-slabs').hide();
+			$('#contact-div').hide();
+
 
 
 
 	})
-
 
 
 })

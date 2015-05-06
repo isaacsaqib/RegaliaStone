@@ -1,9 +1,7 @@
 <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
 
 
-<div id="header">
-
-	<div id="logo-box"> 
+<div id="header"> 
 		<img id="logo" src="assets/
 		logo.png">
 	</div>
@@ -35,6 +33,13 @@
 	<h1> Quartz Slabs</h1>
 	<h2>• The highest quality slabs available on the market </h2>
 	<h3> • All quartz slabs are sizes 120" x 64" 3CM or bigger </h3>
+	<h4>• Willing to match price with anyone. Just bring in proof</p>
+</div>
+
+<div id="granites-header">
+	<h1> Granite Slabs</h1>
+	<h2>• The highest quality slabs available on the market </h2>
+	<h3> • All Granit slabs are sizes 120" x 64" 3CM or bigger </h3>
 	<h4>• Willing to match price with anyone. Just bring in proof</p>
 </div>
 
@@ -96,6 +101,7 @@
 							<p>	<%=granite.name%></p><br>
 							<p><%=granite.description%><br></p>
 							<p><%=link_to 'Edit', edit_granite_path(granite) %></p>
+							<p><%=link_to 'Show', granite_path(granite) %></p>
 							</center>
 						</figcaption>
 					</figure>

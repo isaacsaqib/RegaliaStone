@@ -19,6 +19,12 @@ class GranitesController < ApplicationController
 
 	end
 
+
+	def show
+		@granite =Granite.find(params[:id])
+	end
+
+
 	def edit
 		@granite = Granite.find(params[:id])
 	end

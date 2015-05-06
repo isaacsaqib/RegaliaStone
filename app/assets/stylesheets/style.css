@@ -265,6 +265,40 @@ text-align: center;
   margin-bottom: 35px;
 }
 
+#granites-header h1  {
+  color: black;
+  text-align: center;
+  /*margin: 30px;*/
+  font-size: 40px;
+  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+  text-decoration: underline;
+  margin-top: 40px;
+  text-shadow: 0px 0px 0px black;
+}
+
+#granites-header h2 {
+  color: black;
+  text-align: center;
+    font-family: 'Slabo', serif;
+
+    margin:5px;
+
+}
+
+#granites-header h4 {
+  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+  color: black;
+  text-align: center;
+}
+
+#granites-header h3 {
+text-align: center;
+}
+
+#granites-header p:nth-child(4) {
+  margin-bottom: 35px;
+}
+
 
 #contact-div {
    height: 500px;
@@ -285,4 +319,33 @@ text-align: center;
 #quart-show-div img {
   border: 10px solid black;
 
+}
+
+#granite-show-div {
+  margin-top: 200px;
+  text-align: center;
+
+}
+
+#granite-show-div img {
+  border: 10px solid black;
+
+}
+
+
+#granites-slabs li {
+  margin-bottom: 30px;
+  display: inline-block;
+  /*margin-left: 10px;*/
+}
+#granites-slabs img {
+  /*opacity: .7;*/
+  width: 310px;
+  height: 210px;
+  border: 3px solid black;
+  box-shadow: 5px 7px 23px black;
+}
+
+#granites-slabs ul {
+  padding: 0px;
 }
