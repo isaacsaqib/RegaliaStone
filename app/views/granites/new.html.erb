@@ -1,0 +1,9 @@
+
+<%= form_for @granite, :url => quarts_path, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :avatar %>
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>	
+
+

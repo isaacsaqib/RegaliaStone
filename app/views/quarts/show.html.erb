@@ -1,0 +1,8 @@
+<body style="background-image:none;">
+<div id="quart-show-div">
+	<h1 style="color:black"><%=@quart.name%></h1><br>
+
+	<%= image_tag @quart.avatar.url(:medium) %>
+	<p><%=@quart.description%><br></p>
+</div>
+</body>

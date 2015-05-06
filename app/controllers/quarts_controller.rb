@@ -19,6 +19,11 @@ class QuartsController < ApplicationController
 
 	end
 
+	def show
+		@quart = Quart.find(params[:id])
+	end
+
+
 	def edit
 		@quart = Quart.find(params[:id])
 	end
