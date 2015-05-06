@@ -62,19 +62,19 @@
 	<tr>
 		<td class="col">
 			<ul>
+			<% @quarts.each do |quart| %>
 				<li>
 					<figure>
-						<% @quarts.each do |quart| %>
 						<%= image_tag quart.avatar.url(:medium) %>
 					<figcaption>
 					<center><p>	<%=quart.name%></p><br>
 					<p><%=quart.description%><br>
-					<% end %>
 					</p>
 					</center>
 					</figcaption>
 					</figure>
 				</li>
+				<% end %>
 			</ul>
 		</td>
 	</tr>
