@@ -1,7 +1,7 @@
 class QuartsController < ApplicationController
 	def index
 	@quarts = Quart.all	
-
+	
 	end
 
 
@@ -12,12 +12,28 @@ class QuartsController < ApplicationController
 	def create
 	@quart = Quart.new(quart_params)
 		if @quart.save
-			redirect_to "/"
+			redirect_to "/quarts/new"
 		else
 			render :new 
 		end
 
 	end
+
+	def edit
+		@quart = Quart.find(params[:id])
+	end
+
+	def update
+		@quart = Quart.find(params[:id])
+
+			if @quart.update(quart_params)
+				redirect_to "/"
+			else
+				render 'edit'
+			end
+	end
+
+
 
 	private
 

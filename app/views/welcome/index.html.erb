@@ -70,13 +70,39 @@
 					<center><p>	<%=quart.name%></p><br>
 					<p><%=quart.description%><br>
 					</p>
+					<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 					</center>
 					</figcaption>
 					</figure>
 				</li>
 				<% end %>
+
+					<td class="col">
+						<ul>
+		
+						<%	if @quarts.count > 6 %>
+							
+							<% @quarts_two.each do |quart| %>
+							<li>
+								<figure>
+									<%= image_tag quart.avatar.url(:medium) %>
+								<figcaption>
+								<center><p>	<%=quart.name%></p><br>
+								<p><%=quart.description%><br>
+								</p>
+								<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+								</center>
+								</figcaption>
+								</figure>
+							</li>
+					<% end %>
+				<% end %>
 			</ul>
 		</td>
+
+		<td>
+			<ul>
+				<li>
 	</tr>
 		</table>
 
