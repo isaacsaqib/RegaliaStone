@@ -1,6 +1,7 @@
 <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-
-
+<% if logged_in? %>
+ <a class="links" href="/logout"> Logout</a>
+<% end %>
 <div id="header"> 
 		<img id="logo" src="assets/
 		logo.png">
@@ -24,6 +25,7 @@
 	<!-- <p><%= @quarts.to_a.take(1) %></p> -->
 	<input type="submit" class="styled-button-1" value="View our latest designs" /> 
 </div>
+
 
 <!-- Start Quartz Page -->
 
@@ -76,8 +78,10 @@
 							<center>
 							<p>	<%=quart.name%></p><br>
 							<p><%=quart.description%><br></p>
+							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 							<p><%=link_to 'Show', quart_path(quart) %></p>
+							<% end %>
 							</center>
 						</figcaption>
 					</figure>
@@ -100,8 +104,10 @@
 							<center>
 							<p>	<%=granite.name%></p><br>
 							<p><%=granite.description%><br></p>
+							<% if logged_in? %>
 							<p><%=link_to 'Edit', edit_granite_path(granite) %></p>
 							<p><%=link_to 'Show', granite_path(granite) %></p>
+							<% end %>
 							</center>
 						</figcaption>
 					</figure>

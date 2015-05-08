@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :quarts
   resources :granites
+  resources :users
+
+  get  "/admin"  => "session#new"
+  post "/session"      => "session#create"
+  #logout route
+  get  "/logout"       => "session#destroy"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

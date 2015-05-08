@@ -194,16 +194,16 @@ margin: 3px;
 }
 
 figcaption {
-background: rgba(255,255,255,.8);
+background: rgba(0,0,0,.8);
 color: white;
 display: table;
-height: 100%;
-width: 100%;
-left: 0px;
+height: 97%;
+width: 97%;
+left: 7px;
 opacity: 0;
 position: absolute;
 /* right: 0; */
-top: 5px;
+top: 6px;
 z-index: 100;
 transition: .3s;
 /*font-size: 10px;*/
@@ -212,7 +212,7 @@ transition: .3s;
 
 figcaption p {
   /*display: table-cell;*/
-  font-size: 1.5em;
+  font-size: 30px;
   position: relative;
   top: 40px;
   /*left: 240px;*/
@@ -220,13 +220,13 @@ figcaption p {
   /*vertical-align: middle;*/
   margin: 0px;
   font-family: 'Slabo', serif;
-  color: black;
+  color: white;
 
 }
 
 ul li:hover figcaption {
   opacity: 1;
-  font-size: 10px;
+  font-size: 25px;
   cursor: pointer;
   /*border: 3px solid black;*/
 }
