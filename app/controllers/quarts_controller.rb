@@ -38,6 +38,12 @@ class QuartsController < ApplicationController
 			end
 	end
 
+	def destroy
+		@quart = Quart.find(params[:id])
+		@quart.destroy
+	end
+
+
 
 
 	private

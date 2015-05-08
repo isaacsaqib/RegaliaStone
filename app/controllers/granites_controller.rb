@@ -39,6 +39,12 @@ class GranitesController < ApplicationController
 			end
 	end
 
+	def destroy
+		@granite = Granite.find(params[:id])
+		@granite.destroy
+	end
+
+
 
 
 	private
