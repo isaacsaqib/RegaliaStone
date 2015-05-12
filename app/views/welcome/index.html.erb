@@ -3,8 +3,8 @@
  <a class="links" href="/logout"> Logout</a>
 <% end %>
 <div id="header"> 
-		<img id="logo" src="assets/
-		logo.png">
+		<a href="/"><img id="logo" src="assets/
+		logo.png"></a>
 	</div>
 
 	<!-- Box containing logo -->
@@ -23,7 +23,7 @@
 <div id="box">
 	<p> We Sell Slabs At <br>Wholesale Prices </p>
 	<!-- <p><%= @quarts.to_a.take(1) %></p> -->
-	<input type="submit" class="styled-button-1" value="View our latest designs" /> 
+	<input id="front-page-button" type="submit" class="styled-button-1" value="View our latest designs" /> 
 </div>
 
 
@@ -58,10 +58,9 @@
 <!-- Start Contact Page -->
 
 <div id='contact-div'>
-	<h1> We are available for your convenience at all times!</h1>
-	<h3>Address: </h3>
-	<h3>Phone Number:</h3>
-	<h3>Email:</h3>
+	<h1>We are available for your convenience at all times! For inquiries please contact sales: </h1>
+	<h3>Aresh@RegaliaStone.com</h3>
+	<h3>Sami@RegaliaStone.com</h3>
 	
 
 </div>
@@ -76,7 +75,7 @@
 						<%= image_tag quart.avatar.url(:medium) %>
 						<figcaption>
 							<center>
-							<p>	<%=quart.name%></p><br>
+							<p><%=quart.name%></p><br>
 							<p><%=quart.description%><br></p>
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>

@@ -40,5 +40,15 @@ $(document).ready(function(){
 			$('#granites-slabs').hide();
 			$('#granites-header').hide();
 	})
+
+	$("#front-page-button").on("click", function(){
+			$('#box').fadeOut(100)
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('#quartz-slabs').fadeIn(2000)
+			$('#quartz-header').show(2000);
+			$('#contact-div').hide();
+			$('#granites-slabs').hide();
+			$('#granites-header').hide();		
+	})
 })
 
