@@ -1,8 +1,7 @@
 <body style="background-image:none;">
 <div id="granite-show-div">
 	<h1 style="color:black"><%=@granite.name%></h1><br>
-
-	<%= image_tag @granite.avatar.url(:medium) %>
+	<%= image_tag @granite.avatar.url(:original) %>
 	<p><%=@granite.description%><br></p>
 </div>
 </body>
