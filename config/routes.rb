@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   #logout route
   get  "/logout"       => "session#destroy"
 
+  get "/system/quarts/avatars/000/000/001/medium/Almond.jpg" =>"welcome#index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
