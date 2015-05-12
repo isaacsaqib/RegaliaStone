@@ -5,6 +5,10 @@ $(document).ready(function(){
 	$('#granites-slabs').hide();
 	$('#granites-header').hide();
 
+	if(window.innerHeight > window.innerWidth){
+    alert("Please rotate your mobile device to view this page!");
+  }
+
 	// Quarts 
 
 	$('#nav li:nth-child(2)').on('click', function(){
