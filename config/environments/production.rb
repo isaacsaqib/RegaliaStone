@@ -1,4 +1,13 @@
 Rails.application.configure do
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['regaliastoneimages'],
+    :access_key_id => ENV['AKIAIOZOUKNK3CJCE65Q'],
+    :secret_access_key => ENV['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']
+  }
+}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
