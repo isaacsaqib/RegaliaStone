@@ -3,9 +3,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['regaliastoneimages'],
-    :access_key_id => ENV['AKIAIOZOUKNK3CJCE65Q'],
-    :secret_access_key => ENV['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']
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
   # Settings specified here will take precedence over those in config/application.rb.
