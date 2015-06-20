@@ -49,7 +49,7 @@ class QuartsController < ApplicationController
 	private
 
 	def quart_params
-		params.require(:quart).permit(:name, :description, :avatar)
+		params.require(:quart).permit(:name, :description, :avatar, :alt, :sort_by_color)
 
 	end
 

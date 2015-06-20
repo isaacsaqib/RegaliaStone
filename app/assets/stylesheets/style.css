@@ -1,3 +1,5 @@
+
+
 #header {
   height: 130px;
   width: 100%;
@@ -9,7 +11,7 @@
 
 #box {
   height: 190px;
-  width: 480px;
+  width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, .6);
   margin: 0 auto;
@@ -134,8 +136,8 @@ ul {
 
 #caption {
   text-align: center;
-    font-family: 'IM Fell English', serif; 
-    font-style: italic;
+  font-family: 'AdelleSans-Thin';
+  font-style: italic;
 
 }
 #nav {
@@ -155,7 +157,9 @@ ul {
   text-decoration: none;
   color: black;
   font-size: 22px;
-  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+  /*font-family: 'Vollkorn', serif;  font-weight: 200px; */
+    font-family: 'AdelleSans-Thin';
+
   /*font-style: italic;*/
   transition: .2s;
   /*margin: 0px;*/
@@ -219,7 +223,9 @@ figcaption p {
   /*width: 289px;*/
   /*vertical-align: middle;*/
   margin: 0px;
-  font-family: 'Slabo', serif;
+  /*font-family: 'Slabo', serif;*/
+    font-family: 'AdelleSans-Thin';
+
   color: white;
 
 }
@@ -236,28 +242,34 @@ ul li:hover figcaption {
   text-align: center;
   /*margin: 30px;*/
   font-size: 40px;
-  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+  /*font-family: 'Vollkorn', serif;  font-weight: 200px; */
+    font-family: 'AdelleSans-Thin';
+
   text-decoration: underline;
   margin-top: 40px;
   text-shadow: 0px 0px 0px black;
 }
 
-#quartz-header h2 {
+#quartz-header p {
   color: black;
   text-align: center;
-    font-family: 'Slabo', serif;
+    /*font-family: 'Slabo', serif;*/
+      font-family: 'AdelleSans-Thin';
+
 
     margin:5px;
 
 }
 
-#quartz-header h4 {
-  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+#quartz-header p {
+  /*font-family: 'Vollkorn', serif;  font-weight: 200px; */
+    font-family: 'AdelleSans-Thin';
+
   color: black;
   text-align: center;
 }
 
-#quartz-header h3 {
+#quartz-header p {
 text-align: center;
 }
 
@@ -270,28 +282,34 @@ text-align: center;
   text-align: center;
   /*margin: 30px;*/
   font-size: 40px;
-  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+  /*font-family: 'Vollkorn', serif;  font-weight: 200px; */
+    font-family: 'AdelleSans-Thin';
+
   text-decoration: underline;
   margin-top: 40px;
   text-shadow: 0px 0px 0px black;
 }
 
-#granites-header h2 {
+#granites-header p {
   color: black;
   text-align: center;
-    font-family: 'Slabo', serif;
+    /*font-family: 'Slabo', serif;*/
+      font-family: 'AdelleSans-Thin';
+
 
     margin:5px;
 
 }
 
-#granites-header h4 {
-  font-family: 'Vollkorn', serif;  font-weight: 200px; 
+#granites-header p {
+  /*font-family: 'Vollkorn', serif;  font-weight: 200px; */
+    font-family: 'AdelleSans-Thin';
+
   color: black;
   text-align: center;
 }
 
-#granites-header h3 {
+#granites-header p {
 text-align: center;
 }
 
@@ -301,18 +319,30 @@ text-align: center;
 
 
 #contact-div {
-   height: 500px;
-  width: 1200px;
+  font-family: 'AdelleSans-Thin';
+  height: 500px;
+  width: 100%;
   text-align: center;
   /*background-color: rgba(0, 0, 0, .6);*/
   margin: 0 auto;
   margin-top: 90px;
   color:black;
 
+
 }
 
 #contact-div h1 {
   color: black;
+
+
+}
+
+#contact-div img {
+  height: 350px;
+  width: 600px;
+  margin: 0 auto;
+  border: 2px solid black;
+
 }
 
 #quart-show-div {
@@ -352,3 +382,44 @@ text-align: center;
 #granites-slabs ul {
   padding: 0px;
 }
+
+#new_quart_div {
+  /*display: block;*/
+  height: 50px;
+  width: 100%;
+  /*margin: 0 auto;*/
+  margin-top: 300px;
+  /*background-color: black;*/
+
+}
+
+#new_quart_div ul {
+  /*color: white;*/
+  /*font-size: 24px;*/
+  /*margin: 0 auto;*/
+  padding: 0px;
+    background-color: rgba(255, 255, 255, .6);
+
+}
+
+#new_quart_div li {
+  margin: 0 auto;
+  display: inline-block;
+  color: black;
+  font-size: 16px;
+}
+
+/*#footer-div {
+  margin-top: 220px;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+
+}*/
+
+/*#footer-div p {
+  text-align: center;
+
+}*/
+
+

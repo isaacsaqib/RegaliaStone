@@ -1,9 +1,19 @@
 
-<%= form_for @quart, :url => quarts_path, :html => { :multipart => true } do |f| %>
-  <%= f.file_field :avatar %>
-  <%= f.text_field :name %>
-  <%= f.text_field :description %>
-  <%= f.submit %>
-<% end %>	
 
+<div id="new_quart_div">
+	<ul>
+	<%= form_for @quart, :url => quarts_path, :html => { :multipart => true } do |f| %>
+	  <%= f.file_field :avatar %>
+	  <li><%= f.label("Name") %></li>
+	  <%= f.text_field :name %>
+	  <li><%= f.label("Description") %></li>
+	  <%= f.text_field :description %>
+	  <li><%= f.label("Alt") %></li>
+	  <%= f.text_field :alt %>
+	  <li><%= f.label("Color") %>  </li>
+	  <%= f.text_field :sort_by_color %>
+	  <li><%= f.submit %></li>
+	<% end %>	
+	</ul>
 
+</div>
