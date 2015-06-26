@@ -10,7 +10,7 @@
 }
 
 #box {
-  height: 190px;
+  height: 300px;
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, .6);
@@ -28,6 +28,14 @@
     padding-top: 30px;
     margin-bottom: 10px;
 
+
+}
+
+#box p:nth-child(1) {
+    font-family: 'AdelleSans-Thin';
+    font-size: 18px;
+    margin-left: 260px;
+    margin-right: 260px;
 
 }
 
@@ -452,8 +460,14 @@ text-align: center;
     }
 
   #contact-div img {
-      height: 150px;
-  width: 240px;
+    height: 150px;
+    width: 240px;
+  }
+
+  #box p:nth-child(1) {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 15px;
   }
 
  
