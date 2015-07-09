@@ -4,14 +4,50 @@ $(document).ready(function(){
 	$('#contact-div').hide();
 	$('#granites-slabs').hide();
 	$('#granites-header').hide();
+		$('#stone-nav').hide();
+			$('#cust-nav').hide();
+
+
 
 	if(window.innerHeight > window.innerWidth){
     alert("Please rotate your mobile device to view this page!");
   }
 
+  	//stone-nav fade in 
+  	$('#nav li:nth-child(1)').on('mouseover', function(){
+	$('#stone-nav').fadeIn();
+
+  	})
+
+  	$('#nav li:nth-child(2)').on('mouseover', function(){
+		$('#stone-nav').fadeOut();
+	})
+
+		$('#nav li:nth-child(4)').on('mouseover', function(){
+		$('#stone-nav').fadeOut();
+	})
+
+  	//customer-care
+	$('#nav li:nth-child(4)').on('mouseover', function(){
+	$('#cust-nav').fadeIn();
+
+  	})
+
+  	$('#nav li:nth-child(1)').on('mouseover', function(){
+		$('#cust-nav').fadeOut();
+	})
+
+
+ //  	$('#nav li:nth-child(1)').on('mouseleave', function(){
+	// $('#stone-nav').fadeOut();
+
+ //  	})
+
+
+
 	// Quarts 
 
-	$('#nav li:nth-child(2)').on('click', function(){
+	$('#stone-nav li:nth-child(2)').on('click', function(){
 			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('#quartz-slabs').fadeIn(2000)
@@ -23,7 +59,7 @@ $(document).ready(function(){
 
 	// Granite
 
-	$('#nav li:nth-child(3)').on('click', function(){
+	$('#stone-nav li:nth-child(3)').on('click', function(){
 			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('#granites-slabs').fadeIn(2000)
@@ -35,7 +71,7 @@ $(document).ready(function(){
 
 	// Contact
 
-	$('#nav li:nth-child(4)').on('click', function(){
+	$('#nav li:nth-child(2)').on('click', function(){
 			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('#contact-div').slideDown();
@@ -45,6 +81,12 @@ $(document).ready(function(){
 			$('#granites-header').hide();
 	})
 
+	//Customer Care
+
+
+
+
+	//View our latest styles button 
 	$("#front-page-button").on("click", function(){
 			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
