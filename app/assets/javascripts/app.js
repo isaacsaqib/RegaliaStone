@@ -4,8 +4,10 @@ $(document).ready(function(){
 	$('#contact-div').hide();
 	$('#granites-slabs').hide();
 	$('#granites-header').hide();
-		$('#stone-nav').hide();
-			$('#cust-nav').hide();
+	$('#stone-nav').hide();
+	$('#cust-nav').hide();
+	$('#faq-div').hide();
+	$('.answers').hide();
 
 
 
@@ -23,27 +25,35 @@ $(document).ready(function(){
 		$('#stone-nav').fadeOut();
 	})
 
-		$('#nav li:nth-child(4)').on('mouseover', function(){
+	$('#nav li:nth-child(3)').on('mouseover', function(){
+		$('#cust-nav').fadeOut();
+	})
+
+	$('#nav li:nth-child(4)').on('mouseover', function(){
 		$('#stone-nav').fadeOut();
 	})
 
+
   	//customer-care
 	$('#nav li:nth-child(4)').on('mouseover', function(){
-	$('#cust-nav').fadeIn();
+		$('#cust-nav').fadeIn();
 
   	})
 
   	$('#nav li:nth-child(1)').on('mouseover', function(){
 		$('#cust-nav').fadeOut();
 	})
+		$('#nav li:nth-child(2)').on('mouseover', function(){
+		$('#cust-nav').fadeOut();
+	})
+		$('#nav li:nth-child(3)').on('mouseover', function(){
+		$('#cust-nav').fadeOut();
+	})
 
 
- //  	$('#nav li:nth-child(1)').on('mouseleave', function(){
-	// $('#stone-nav').fadeOut();
-
- //  	})
 
 
+// -------Stone-------
 
 	// Quarts 
 
@@ -55,6 +65,8 @@ $(document).ready(function(){
 			$('#contact-div').hide();
 			$('#granites-slabs').hide();
 			$('#granites-header').hide();
+			$('#faq-div').hide();
+			$('.answers').hide();			
 	})
 
 	// Granite
@@ -67,8 +79,11 @@ $(document).ready(function(){
 			$('#quartz-header').hide();
 			$('#quartz-slabs').hide();
 			$('#contact-div').hide();
+			$('#faq-div').hide();
+			$('.answers').hide();					
 	})
 
+	
 	// Contact
 
 	$('#nav li:nth-child(2)').on('click', function(){
@@ -79,11 +94,24 @@ $(document).ready(function(){
 			$('#quartz-header').hide();
 			$('#granites-slabs').hide();
 			$('#granites-header').hide();
+			$('#faq-div').hide();
+			$('.answers').hide();					
 	})
 
-	//Customer Care
+	//-----Customer Care----
 
+	// FAQ
 
+	$('#cust-nav li:nth-child(1)').on('click', function(){
+			$('#box').fadeOut(100)
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('#quartz-header').hide();
+			$('#quartz-slabs').hide();
+			$('#granites-slabs').hide();
+			$('#granites-header').hide();				
+			$('#contact-div').hide();
+			$('#faq-div').fadeIn();
+	})
 
 
 	//View our latest styles button 
@@ -96,5 +124,15 @@ $(document).ready(function(){
 			$('#granites-slabs').hide();
 			$('#granites-header').hide();		
 	})
+
+
+	//questions
+
+	$(".question").on("click", function(){
+		$(this).next().slideDown();
+	})
+
+
+
 })
 
