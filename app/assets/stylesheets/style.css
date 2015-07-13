@@ -477,7 +477,7 @@ text-align: center;
   /*margin-top: 220px;*/
   height: 160px;
   width: 100%;
-  background-color: rgba(226, 226, 226, .9);
+  background-color: rgba(255, 255, 255, 1);
 
 }
 
@@ -527,6 +527,16 @@ text-align: center;
 font-family: 'AdelleSans-Thin';
 font-style: italic;
 
+}
+
+#terms {
+  height: 900px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 5px dotted black;
+
+  /*width: 100%;*/
 }
 
 @media (max-width: 1280px) {

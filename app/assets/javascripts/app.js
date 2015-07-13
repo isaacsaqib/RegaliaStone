@@ -8,6 +8,7 @@ $(document).ready(function(){
 	$('#cust-nav').hide();
 	$('#faq-div').hide();
 	$('.answers').hide();
+	$('#terms').hide();	
 
 
 
@@ -58,44 +59,30 @@ $(document).ready(function(){
 	// Quarts 
 
 	$('#stone-nav li:nth-child(2)').on('click', function(){
-			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
 			$('#quartz-slabs').fadeIn(2000)
-			$('#quartz-header').show(2000);
-			$('#contact-div').hide();
-			$('#granites-slabs').hide();
-			$('#granites-header').hide();
-			$('#faq-div').hide();
-			$('.answers').hide();			
+			$('#quartz-header').show(2000);		
 	})
 
 	// Granite
 
 	$('#stone-nav li:nth-child(3)').on('click', function(){
-			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
 			$('#granites-slabs').fadeIn(2000)
 			$('#granites-header').fadeIn(2000);
-			$('#quartz-header').hide();
-			$('#quartz-slabs').hide();
-			$('#contact-div').hide();
-			$('#faq-div').hide();
-			$('.answers').hide();					
+				
 	})
 
 	
 	// Contact
 
 	$('#nav li:nth-child(2)').on('click', function(){
-			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();		
 			$('#contact-div').slideDown();
-			$('#quartz-slabs').hide()
-			$('#quartz-header').hide();
-			$('#granites-slabs').hide();
-			$('#granites-header').hide();
-			$('#faq-div').hide();
-			$('.answers').hide();					
+		
 	})
 
 	//-----Customer Care----
@@ -103,26 +90,31 @@ $(document).ready(function(){
 	// FAQ
 
 	$('#cust-nav li:nth-child(1)').on('click', function(){
-			$('#box').fadeOut(100)
 			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('#quartz-header').hide();
-			$('#quartz-slabs').hide();
-			$('#granites-slabs').hide();
-			$('#granites-header').hide();				
-			$('#contact-div').hide();
+			$('.hide').hide();
 			$('#faq-div').fadeIn();
+	})
+
+	// Warranty
+
+
+	$('#cust-nav li:nth-child(2)').on('click', function(){
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
+			$('#warranty-div').show();
+			$('#terms').show();
+
 	})
 
 
 	//View our latest styles button 
 	$("#front-page-button").on("click", function(){
-			$('#box').fadeOut(100)
+
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
 			$('#quartz-slabs').fadeIn(2000)
 			$('#quartz-header').show(2000);
-			$('#contact-div').hide();
-			$('#granites-slabs').hide();
-			$('#granites-header').hide();		
+	
 	})
 
 
