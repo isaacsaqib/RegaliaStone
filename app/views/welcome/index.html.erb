@@ -96,19 +96,15 @@
 			<ul>
 				<% @quarts.each do |quart| %>
 				<li>
-					<a href="<%=quart_path(quart)%>"><figure>
+					<a href="<%=quart_path(quart)%>">
 						<%= image_tag quart.avatar.url(:medium) %>
-						<figcaption>
-							<center>
 							<p><%=quart.name%></p><br>
-							<p><%=quart.description%><br></p>
+							<!-- <p><%=quart.description%><br></p> -->
+							<!-- admin only links -->
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
 							<% end %>
-							</center>
-						</figcaption>
-					</figure></a>
 				</li>
 				<% end %>
 			</ul>
@@ -135,20 +131,19 @@
 			<ul>
 				<% @granites.each do |granite| %>
 				<li>
-					<a href="<%=granite_path(granite)%>"><figure>
+					<a href="<%=granite_path(granite)%>">
 						<%= image_tag granite.avatar.url(:medium) %>
-						<figcaption>
-							<center>
-							<p>	<%=granite.name%></p><br>
-							<p><%=granite.description%><br></p>
+						
+							<p><%=granite.name%></p><br>
+							<!-- <p><%=granite.description%><br></p> -->
+							<!-- admin only links -->
 							<% if logged_in? %>
 							<p><%=link_to 'Edit', edit_granite_path(granite) %></p>
 							<p><%=link_to 'Show', granite_path(granite) %></p>
 							<p><%=link_to "Delete", granite_path(granite), :method => :delete %></p>			
 							<% end %>
-							</center>
-						</figcaption>
-					</figure></a>
+						
+					</a>
 				</li>
 				<% end %>
 			</ul>
@@ -160,7 +155,7 @@
 
 <!-- FAQ page -->
 
-<div id="faq-div" class="hide">
+<div id="faq-div" class="hidee">
 
 	<h1>F.A.Q</h1>
 
