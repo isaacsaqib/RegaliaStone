@@ -62,7 +62,6 @@ table {
   overflow: visible;
   display: inline-block;
   zoom: 1;
-  -webkit-appearance: none;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -150,7 +149,7 @@ ul {
 #nav {
   text-align: center;
   margin-top: -29px;
-  margin-left: 80px;
+  margin-left: -20px;
 }
 
 #nav li {
@@ -531,7 +530,7 @@ font-style: italic;
   /*width: 100%;*/
 }
 
-@media (max-width: 1314px) {
+@media (max-width: 1280px) {
   #logo {
     margin: 0 auto;
     display: block;
@@ -568,4 +567,20 @@ font-style: italic;
  
 
 
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
 
