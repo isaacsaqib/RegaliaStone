@@ -2,9 +2,13 @@
 <% if logged_in? %>
  <a class="links" href="/logout"> Logout</a>
 <% end %>
+
+
+
+
+	<!-- Box containing logo -->
 <div id="header"> 
-		<img id="logo" src="assets/
-		logo.png">
+		<%= image_tag 'logo.png', :id => "logo" %>
 	<ul id="nav">
 		<li><a>Stone</a></li>	
 		<li><a>Contact</a></li>
@@ -26,9 +30,6 @@
 
 
 </div>
-
-	<!-- Box containing logo -->
-
 	
 
 
@@ -155,7 +156,7 @@
 
 <!-- FAQ page -->
 
-<div id="faq-div" class="hidee">
+<div id="faq-div" class="hide">
 
 	<h1>F.A.Q</h1>
 
