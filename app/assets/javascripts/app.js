@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$('#faq-div').hide();
 	$('.answers').hide();
 	$('#terms').hide();	
+	$('#review-div').hide();
 
 
 
@@ -104,6 +105,14 @@ $(document).ready(function(){
 			$('#warranty-div').show();
 			$('#terms').show();
 
+	})
+
+	//Reviews
+
+	$('#cust-nav li:nth-child(3)').on('click', function(){
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
+			$('#review-div').fadeIn();
 	})
 
 

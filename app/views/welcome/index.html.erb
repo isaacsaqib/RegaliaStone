@@ -31,7 +31,7 @@
 	<ul id="cust-nav">
 		<li><a>FAQ</a></li>	
 		<li><a>Warranty</a></li>
-		<li><a>Support</a></li>
+		<li><a>Reviews</a></li>
 	</ul>	
 
 
@@ -153,7 +153,6 @@
 							<p><%=link_to 'Show', granite_path(granite) %></p>
 							<p><%=link_to "Delete", granite_path(granite), :method => :delete %></p>			
 							<% end %>
-						
 					</a>
 				</li>
 				<% end %>
@@ -172,188 +171,94 @@
 
 	<ul id="questions-list">
 		<li>
-
-		<p class="question">
-			Does granite burn?
-		</p>
-
-			<p class="answers">
-			
-
-
-No. It is perfectly ok to set hot pots or pans onto granite.
-
-
-
-
-			
-			</p>
-
+			<p class="question">Does granite burn?</p>
+			<p class="answers">No. It is perfectly ok to set hot pots or pans onto granite.</p>
 		</li>
+
 		<li>
-
-		<p class="question">
-			How do you take care of granite?
-		</p>
-
-			<p class="answers">
-			
-
-
-Use cleaners specifically formulated to help clean and protect stone surfaces.
-
-
-
-			
-			</p>
-
+			<p class="question">How do you take care of granite?</p>
+			<p class="answers">Use cleaners specifically formulated to help clean and protect stone surfaces.</p>
 		</li>
+
 		<li>
-
-		<p class="question">
-			Can I buy materials form you directly?
-
-		</p>
-
+			<p class="question">Can I buy materials form you directly?</p>
 			<p class="answers">
-			
-
-
-Yes! While our showroom is open to the public, Regalia Stone is a wholesale distributor, so we sell to trade professionals, including designers, builders, contractors, fabricators and etc. Our slabs are available to anyone.
-
-
-
-
-			
+			Yes! While our showroom is open to the public, Regalia Stone is a wholesale distributor, so we sell to trade professionals, including designers, builders, contractors, fabricators and etc. Our slabs are available to anyone.
 			</p>
-
 		</li>
+
 		<li>
-
-		<p class="question">
-			Can I choose my own slabs?
-		</p>
-
-			<p class="answers">
-			
-
-
-Yes! Our staffs are there with you 100%. We are happy to have you approve the stone and we will help you make the best choice for your needs.
-
-
-
-			
+			<p class="question">Can I choose my own slabs?</p>
+			<p class="answers">Yes! Our staffs are there with you 100%. We are happy to have you approve the stone and we will help you make the best choice for your needs.
 			</p>
-
 		</li>
+
 		<li>
-
-		<p class="question">
-			Do you do fabrication?
-		</p>
-
+			<p class="question">Do you do fabrication?</p>
 			<p class="answers">
-			
-
-Yes! At Regalia Stone, we specialize in distributing, importing, and fabricating for our clients. Our fabrication team turn stone into perfect kitchen and bathroom countertops leaving the clients with the freedom of imagination.
-
-
-
-
-			
+			Yes! At Regalia Stone, we specialize in distributing, importing, and fabricating for our clients. Our fabrication team turn stone into perfect kitchen and bathroom countertops leaving the clients with the freedom of imagination.
 			</p>
-
 		</li>
+
 		<li>
-
-		<p class="question">
-			Do I need to apply a sealer on my granite or quartz surface?
-
-		</p>
-
-			<p class="answers">
-			
-
-
-No. They are a non-porous surface, so you will never have to apply sealer to any surface.
-
-
-
-
-			
-			</p>
-
+			<p class="question">Do I need to apply a sealer on my granite or quartz surface?</p>
+			<p class="answers">No. They are a non-porous surface, so you will never have to apply sealer to any surface.</p>
 		</li>
+
 		<li>
-
-		<p class="question">
-			How thick are the slabs?
-		</p>
-
-			<p class="answers">
-			
-
-
-
-Our stone slabs are available in (126"X64") 3cm thickness.
-
-
-
-			
-			</p>
-
+			<p class="question">How thick are the slabs?</p>
+			<p class="answers">Our stone slabs are available in (126"X64") 3cm thickness.</p>
 		</li>
+
 		<li>
-
-		<p class="question">
-			What is quartz?
-
-		</p>
-
+			<p class="question">What is quartz?</p>
 			<p class="answers">
-			
-
-
-Quartz is one of the hardest, most abundant minerals found in nature ? only diamond, sapphire and topaz are harder. Besides beauty, the quartz in the slabs give it extreme strength, making the slabs highly scratch-resistant.
-
-
-
-
-			
+			Quartz is one of the hardest, most abundant minerals found in nature ? only diamond, sapphire and topaz are harder. Besides beauty, the quartz in the slabs give it extreme strength, making the slabs highly scratch-resistant.
 			</p>
-
 		</li>
+
 		<li>
-
-		<p class="question">
-			Do you offer a warranty?
-		</p>
-
+			<p class="question">Do you offer a warranty?</p>
 			<p class="answers">
-			
-
-
-
-
-Yes! Warranty valied for only defect products.
-
-
-			
-			</p>
-
+			Yes! Warranty valied for only defect products.</p>
 		</li>
-		
-
 	</ul>
-	
-
-
 </div>
 
 <!-- Warranty Page -->
 
 <div id="warranty-div" class="hide">
 	<img id="terms" src="assets/terms-and-conditions.jpg" >
+
+</div>
+
+<div id="review-div" class="hide">
+
+	<h1>Reviews</h1>
+
+	
+	<% @reviews.each do |review| %>
+	<ul>
+		<li>
+		<p><%=	review.name %>
+		<br>
+		<br>
+		<%=	review.date %>
+		<br>
+		<br>
+		"<em><%=review.description %></em>"
+		</p>
+
+	<%if logged_in? %>
+		<p><%=link_to 'Edit', edit_review_path(review) %></p>
+		<p><%=link_to "Delete", review_path(review), :method => :delete %></p>			
+	<%end %>
+
+		</li>
+	</ul>
+<% end %>
+
+
 
 </div>
 

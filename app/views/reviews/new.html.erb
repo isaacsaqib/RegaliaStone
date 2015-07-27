@@ -1,20 +1,21 @@
 <% if logged_in? %>
 
-	<%= form_for(@review) do |f| %>
-	<%= f.label(:name) %>
-	<%= f.text_field(:name) %>
+<div class="new_div">
+	<ul>
+		<%= form_for(@review) do |f| %>
+			<li><%= f.label(:name) %></li>
+			<%= f.text_field(:name) %>
+			<li><%= f.label(:date) %></li>
+			<%= f.datetime_select(:date) %>
+			<li><%= f.label(:description) %></li>
+			<%= f.text_area(:description) %>
+				<li><%= f.submit %></li>
+		<% end %>
+	</ul>
+</div>	
 
-	  <%= f.label(:date) %>
-	    <%= f.datetime_select(:date) %>
-
-
-	  <%= f.label(:description) %>
-	    <%= f.text_field(:description) %>
-	<%= f.submit %>
-	<% end %>
 <%else %>
 
-<p>Please log in to leave a review</p>
+<p>You must be an administrator to access this page, please return to the home site. </p>
 
-
-<% end %>
+<%end %>

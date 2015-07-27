@@ -1,0 +1,18 @@
+<h1>Editing article</h1>
+ <div class="new_div">
+ <ul>
+	<%= form_for :review, url: review_path(@review), method: :patch do |f| %>
+		<li><%= f.label :name %></li>
+		<%= f.text_field :name %>
+		<li><%= f.label :date %></li>
+		<%= f.datetime_select :date %>
+		<li><%= f.label :description %></li>
+		<%= f.text_area :description %>
+		<li><%= f.submit %></li>
+	<% end %>
+</ul>
+
+</div>
+ 
+
+

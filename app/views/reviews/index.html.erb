@@ -2,4 +2,7 @@
 	<%=	review.name %>
 	<%=	review.date %>
 	<%=	review.description %>
+		<p><%=link_to 'Edit', edit_review_path(review) %></p>
+	<p><%=link_to "Delete", review_path(review), :method => :delete %></p>			
+
 <% end %>

@@ -18,24 +18,33 @@ class ReviewsController < ApplicationController
 	end
 
 	def edit
-		@review = Review.find_by(params[:id])
+		@review = Review.find(params[:id])
 	end
 
 	def update
-		@review = Review.find_by(params[:id])
-		@review.update
+		@review = Review.find(params[:id])
+
+			if @review.update(review_params)
+				redirect_to "/"
+			else
+				render 'edit'
+			end
 	end
 
 	def destroy
-		@review = Review.find_by(params[:id])
+		@review = Review.find(params[:id])
 		@review.destroy
+			if @review.destroy
+				redirect_to('/')
+			end
+			
 	end
 
 
 	private
 
 	def review_params
-		params.require(:review).permit(:name, :date, :descriptionp)
+		params.require(:review).permit(:name, :date, :description)
 	end
 
 end
