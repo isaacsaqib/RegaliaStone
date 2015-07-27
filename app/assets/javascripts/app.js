@@ -124,6 +124,13 @@ $(document).ready(function(){
 		$(this).next().slideDown();
 	})
 
+	$("#tel_2").hide();
+	$("#tel").on("mouseover", function(){
+		$("#nav > li:nth-child(5)").hide();
+		$("#tel_2").fadeIn();
+
+	})
+
 
 
 })

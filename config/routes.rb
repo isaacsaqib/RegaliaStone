@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :quarts
   resources :granites
   resources :users
+  resources :reviews
 
   get  "/admin"  => "session#new"
   post "/session"      => "session#create"

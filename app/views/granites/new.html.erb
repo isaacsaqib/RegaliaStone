@@ -1,9 +1,12 @@
+<% if logged_in? %>
+	<%= form_for @granite, :url => granites_path, :html => { :multipart => true } do |f| %>
+	  <%= f.file_field :avatar %>
+	  <%= f.text_field :name %>
+	  <%= f.text_field :description %>
+	  <%= f.submit %>
+	<% end %>	
+<% else %>
 
-<%= form_for @granite, :url => granites_path, :html => { :multipart => true } do |f| %>
-  <%= f.file_field :avatar %>
-  <%= f.text_field :name %>
-  <%= f.text_field :description %>
-  <%= f.submit %>
-<% end %>	
+<p>Please log in to create a granite</p>
 
-
+<% end %>
