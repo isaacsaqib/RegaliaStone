@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :quarts
   resources :granites
-  resources :users
+  # resources :users
   resources :reviews
 
   get  "/admin"  => "session#new"
