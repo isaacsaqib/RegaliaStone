@@ -1,7 +1,12 @@
 <body style="background-image:none;">
+
+
 <div id="quart-show-div">
-	<p><%=@quart.name%></p><br>
-	<%= image_tag @quart.avatar.url(:original) %>
-	<p><%=@quart.description%><br></p>
+	<ul>
+		<li><p><%=@quart.name%></p><br></li>
+		<li><%= image_tag @quart.avatar.url(:original) %></li>
+		<p>Specifications</p>
+		<li><p><%=@quart.description%><br></p></li>
+	</ul>
 </div>
 </body>

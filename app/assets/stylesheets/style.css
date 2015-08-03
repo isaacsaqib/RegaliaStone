@@ -392,19 +392,41 @@ text-align: center;
 }
 
 #quart-show-div img {
-  margin: 0 auto;
+  float: left;
+  margin-left: 100px ;
   display: block;
   height: 430px;
-  border: 2px solid black;
+  border: 4px solid black;
+  box-shadow: 2px 2px 22px black;
 }
 
 #quart-show-div p:nth-child(1) {
   font-family: 'AdelleSans-Thin';
   color: black;
-  text-align: center;
+  text-align: left;
   font-size: 40px;
-  margin-bottom: 5px;
+  margin-left: 100px;
 }
+
+#quart-show-div p:nth-child(3) {
+  font-family: 'AdelleSans-Thin';
+  color: black;
+  text-align: left;
+  font-size: 40px;
+  text-align: right;
+  margin-right: 400px;
+}
+
+#quart-show-div > ul > li:nth-child(4) > p {
+  font-family: 'AdelleSans-Thin';
+  color: black;
+  /*text-align: left;*/
+  /*font-size: 40px;*/
+  text-align: right;
+  margin-right: 300px;
+}
+
+
 
 #granite-show-div img {
   margin: 0 auto;
