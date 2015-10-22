@@ -1,6 +1,18 @@
 
 
+<% if logged_in? %>
 <div class="new_div">
+	<ul>
+		<li><a href="/quarts/new"> Add a Quart slab</a></li>
+		<li><a href="/granites/new"> Add a Granite slab </a></li>
+		<li><a href="/marble/new"> Add a Marble slab </a></li>
+
+	</ul>
+</div>
+
+
+<% else %>
+
 <ul>
     <%= form_tag("/session", method: "post") do %>
       <li><%= label_tag(:email) %></li>
@@ -9,6 +21,7 @@
       <%= password_field_tag(:password) %>
       <li><%= submit_tag("Login") %></li>
       <% end %>
-<ul>
+
 </ul>
 
+<% end %>
