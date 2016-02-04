@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 	// Quarts 
 
-	$('#stone-nav li:nth-child(2)').on('click', function(){
+	$('#stone-nav li:nth-child(1)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('#quartz-slabs').fadeIn(2000)
