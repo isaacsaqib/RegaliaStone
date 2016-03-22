@@ -13,9 +13,9 @@ $(document).ready(function(){
 
 
 
-	if(window.innerHeight > window.innerWidth){
-    alert("Please rotate your mobile device to view this page!");
-  }
+	// if(window.innerHeight > window.innerWidth){
+ //    alert("Please rotate your mobile device to view this page!");
+ //  }
 
   	//stone-nav fade in 
  //  	$('#nav li:nth-child(1)').on('mouseover', function(){
