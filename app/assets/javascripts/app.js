@@ -18,14 +18,14 @@ $(document).ready(function(){
   }
 
   	//stone-nav fade in 
-  	$('#nav li:nth-child(1)').on('mouseover', function(){
-	$('#stone-nav').fadeIn();
+ //  	$('#nav li:nth-child(1)').on('mouseover', function(){
+	// $('#stone-nav').fadeIn();
 
-  	})
+ //  	})
 
-  	$('#nav li:nth-child(2)').on('mouseover', function(){
-		$('#stone-nav').fadeOut();
-	})
+ //  	$('#nav li:nth-child(2)').on('mouseover', function(){
+	// 	$('#stone-nav').fadeOut();
+	// })
 
 	$('#nav li:nth-child(3)').on('mouseover', function(){
 		$('#cust-nav').fadeOut();
@@ -59,11 +59,13 @@ $(document).ready(function(){
 
 	// Quarts 
 
-	$('#stone-nav li:nth-child(1)').on('click', function(){
+	$('#nav li:nth-child(1)').on('click', function(){
+
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('#quartz-slabs').fadeIn(2000);
 			$('.hide').hide();
-			$('#quartz-slabs').fadeIn(2000)
-			$('#quartz-header').show(2000);		
+			$('#slides').hide();
+			// $('#quartz-header').show(2000);		
 	})
 
 	// Granite
@@ -81,7 +83,9 @@ $(document).ready(function(){
 
 	$('#nav li:nth-child(2)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.hide').hide();		
+			$('.hide').hide();	
+			$('#slides').hide();
+	
 			$('#contact-div').slideDown();
 		
 	})
@@ -94,6 +98,9 @@ $(document).ready(function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('#faq-div').fadeIn();
+			$('#slides').hide();
+
+
 	})
 
 	// Warranty
@@ -104,6 +111,8 @@ $(document).ready(function(){
 			$('.hide').hide();
 			$('#warranty-div').show();
 			$('#terms').show();
+			$('#slides').hide();
+
 
 	})
 
@@ -113,6 +122,8 @@ $(document).ready(function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('#review-div').fadeIn();
+			$('#slides').hide();
+
 	})
 
 

@@ -8,25 +8,24 @@
 
 	<!-- Box containing logo -->
 <div id="header"> 
-		<a href="#" onClick="window.location.reload();return false;"><%= image_tag 'logo.png', :id => "logo" %></a>
+
+		<a href="#" onClick="window.location.reload();return false;"><%= image_tag 'logo2.png', :id => "logo" %></a>
 
 	<ul id="nav">
-		<li><a>Stone</a></li>	
-		<li><a>Contact</a></li>
-		<li><a>Gallery</a></li>
-		<li><a>Customer Care</a></li>
-		<li><a id="tel" href="tel:+16313960551">Give Us A Call!</a></li>
+		<li><a>STONE</a></li>	
+		<li><a>CONTACT</a></li>
+		<li><a>GALLERY</a></li>
+		<li><a>CUSTOMER CARE</a></li>
+		<li><a id="tel" href="tel:+16313960551">CALL NOW</a></li>
 		<li><a id="tel_2">631-396-0551</a></li>
 
 	</ul>
 
-	
-
-	<ul id="stone-nav">
+	<!-- <ul id="stone-nav"> -->
 		<!-- <li><a>Marble</a></li>	 -->
-		<li><a>Quartz</a></li>
+		<!-- <li><a>Quartz</a></li> -->
 		<!-- <li><a>Granite</a></li> -->
-	</ul>
+	<!-- </ul> -->
 
 	<ul id="cust-nav">
 		<li><a>FAQ</a></li>	
@@ -40,11 +39,38 @@
 </div>
 	
 
+   <div id="slides">
+
+
+  	<img src="assets/SLIDE1.jpeg">
+  	<img src="assets/IMG_1409.jpeg">
+  	<img src="assets/IMG_5020.jpg">
+
+  
+  	<!-- <img src="assets/slide3.JPG"> -->
+  	<!-- <img src="assets/slide4.JPG"> -->
+  	<!-- <img src="assets/M2mk_Final_23-ba3bc5355ba5c54172d2e5cb9c5109eaf20bb507abb4c5b5a36800eb9c443399.jpg"> -->
+    <!-- <img src="assets/pic1-288bdde970eb46feb2575fa574fd0a3da517a60c64146a0cd83e40613a137f3d.jpg"> -->
+    <!-- <img src="assets/pict5-2575e3d1f0fa5c8b92035232957ea07bc5454293c2f96ce7a60dc1b37b21f496.jpg"> -->
+    <!-- <img src="assets/welcome-pic-2fda93a3a360be1e9f71e54a3ca0761ab54155c9458deeab552fb2bc63d74993.jpg"> -->
+
+
+  </div>
+
+  <img style="display:block;width:60%;margin:0 auto;"src="assets/warranty.png">
+
+<!--   	<img style="width:30%; height:30%; padding-left: 50px;" src="assets/slide2.JPG">
+  	<img style="width:30%; height:30%; padding-left: 50px;" src="assets/IMG_5044.JPG">
+
+ -->
+	
+
+
 
 
 <!-- Front page box  -->
-<div id="box" class="hide">
-	<!-- <p>Regalia Stone is the name of choice among architects, designers, builders, contractors,
+<!-- <div id="box" class="hide">
+	<p>Regalia Stone is the name of choice among architects, designers, builders, contractors,
 
 	fabricators and homeowners in the Tri­State area. We have our own quarries and
 
@@ -56,16 +82,60 @@
 
 	to make sure you don't just leave our facility with your job done, but that you leave us feeling delighted and knowing 
 
-	you have someone you can trust. <br><br>Regalia Stone, we're all for you.</p> -->
+	you have someone you can trust. <br><br>Regalia Stone, we're all for you.</p>
 	<p> Welcome to Regalia Stone. </p>
 	<input id="front-page-button" type="submit" class="styled-button-1" value="View our latest designs now!" /> 
-</div>
+</div> -->
 
 
 
 
 
 
+	<script>
+	    $(function(){
+	      $("#slides").slidesjs({
+	        width: 600,
+	        height: 480,
+	        navigation: {
+		      active: false,
+		        // [boolean] Generates next and previous buttons.
+		        // You can set to false and use your own buttons.
+		        // User defined buttons must have the following:
+		        // previous button: class="slidesjs-previous slidesjs-navigation"
+		        // next button: class="slidesjs-next slidesjs-navigation"
+		      effect: "fade"
+		        // [string] Can be either "slide" or "fade".
+		    },
+		   play: {
+		      active: false,
+		        // [boolean] Generate the play and stop buttons.
+		        // You cannot use your own buttons. Sorry.
+		      effect: "fade",
+		        // [string] Can be either "slide" or "fade".
+		      interval: 3000,
+		        // [number] Time spent on each slide in milliseconds.
+		      auto: true,
+		        // [boolean] Start playing the slideshow on load.
+		      swap: true,
+		        // [boolean] show/hide stop and play buttons
+		      pauseOnHover: false,
+		        // [boolean] pause a playing slideshow on hover
+		      restartDelay: 2500
+		        // [number] restart delay on inactive slideshow
+		    },
+		   pagination: {
+		      active: false,
+		        // [boolean] Create pagination items.
+		        // You cannot use your own pagination. Sorry.
+		      effect: "slide"
+		        // [string] Can be either "slide" or "fade".
+		    }
+
+	      });
+	    });
+	  </script>
+	
 
 
 
@@ -91,7 +161,7 @@
 
 <!-- Quartz Table   -->
 
-<div id="quartz-header" class="hide">
+<!-- <div id="quartz-header" class="hide">
 	<p> Quartz Slabs</p>
 	<p>• Quartz is one of the hardest, most abundant minerals found in nature. Only diamond, sapphire and topaz are harder. Besides beauty, the Quartz in the slabs give it extreme strength, making the slabs highly scratch-resistant.
 
@@ -99,7 +169,7 @@
 	<p> • All quartz slabs are sizes 126" x 64" 3CM or bigger </p>
 	<p>• Willing to match price with anyone. Just bring in proof</p>
 </div>
-
+ -->
 
 <table id="quartz-slabs" class="hide">
 	<tr>
