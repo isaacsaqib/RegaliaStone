@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727221431) do
+ActiveRecord::Schema.define(version: 20160324212047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150727221431) do
     t.datetime "avatar_updated_at"
     t.string   "alt"
     t.string   "sort_by_color"
+    t.string   "collection"
   end
 
   create_table "reviews", force: :cascade do |t|

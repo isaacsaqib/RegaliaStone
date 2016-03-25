@@ -5,15 +5,17 @@
 <div class="new_div">
 	<ul>
 	<%= form_for @quart, :url => quarts_path, :html => { :multipart => true } do |f| %>
-	  <%= f.file_field :avatar %>
 	  <li><%= f.label("Name") %></li>
-	  <%= f.text_field :name %>
+	  <%= f.text_field :name %><br>
 	  <li><%= f.label("Description") %></li>
-	  <%= f.text_field :description %>
+	  <%= f.text_field :description %><br>
 	  <li><%= f.label("Alt") %></li>
-	  <%= f.text_field :alt %>
+	  <%= f.text_field :alt %><br>
 	  <li><%= f.label("Color") %>  </li>
-	  <%= f.text_field :sort_by_color %>
+	  <%= f.text_field :sort_by_color %><br>
+	  <li><%= f.label("Collection") %>  </li>
+	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Luminous", "Marmoreal"]) %>
+	  <%= f.file_field :avatar %><br>
 	  <li><%= f.submit %></li>
 	<% end %>	
 	</ul>

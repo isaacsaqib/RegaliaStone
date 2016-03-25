@@ -1,6 +1,7 @@
 class QuartsController < ApplicationController
 	def index
 	@quarts = Quart.all	
+
 	
 	end
 
@@ -12,7 +13,7 @@ class QuartsController < ApplicationController
 	def create
 	@quart = Quart.new(quart_params)
 		if @quart.save
-			redirect_to "/quarts/new"
+			redirect_to "/"
 		else
 			render :new 
 		end
@@ -49,7 +50,7 @@ class QuartsController < ApplicationController
 	private
 
 	def quart_params
-		params.require(:quart).permit(:name, :description, :avatar, :alt, :sort_by_color)
+		params.require(:quart).permit(:name, :description, :avatar, :alt, :sort_by_color, :collection)
 
 	end
 
