@@ -15,6 +15,12 @@ class WelcomeController < ApplicationController
 
 	def specs
 	end
+
+	def warranty
+
+		@quarts = Quart.all
+	end
+	
 	
 
 

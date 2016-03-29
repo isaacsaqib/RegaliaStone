@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :reviews
 
+  get "/warranty" => "welcome#warranty"
   get "/specs" => "welcome#specs"
   get  "/admin"  => "session#new"
   post "/session"      => "session#create"

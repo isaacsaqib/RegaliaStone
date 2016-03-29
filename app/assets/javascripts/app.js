@@ -113,23 +113,11 @@ $(document).ready(function(){
 
 	})
 
-	// Warranty
 
-
-	$('#cust-nav li:nth-child(2)').on('click', function(){
-			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.hide').hide();
-			$('#warranty-div').show();
-			$('#terms').show();
-			$('#slides').hide();
-			$(".warranty-h1").hide();
-			$("#certifications").hide();
-
-	})
 
 	//Reviews
 
-	$('#cust-nav li:nth-child(3)').on('click', function(){
+	$('#cust-nav li:nth-child(2)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('#review-div').fadeIn();
