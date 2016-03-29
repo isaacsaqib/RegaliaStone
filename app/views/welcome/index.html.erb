@@ -12,13 +12,14 @@
 <div id="header"> 
 
 		<a href="#" onClick="window.location.reload();return false;"><%= image_tag 'logo2.png', :id => "logo" %></a>
-
 	<ul id="nav">	
 		<li><a>STONE</a></li>	
 		<li><a>TILE</a></li>	
 		<li><a>CONTACT</a></li>
 		<li><a>GALLERY</a></li>
 		<li><a>CUSTOMER CARE</a></li>
+		<li><a href="/specs">SPECIFICATIONS</a></li>
+
 		<li><a id="tel" href="tel:+16313960551">CALL NOW</a></li>
 		<li><a id="tel_2">631-396-0551</a></li>
 
@@ -34,7 +35,7 @@
 		<li><a>FAQ</a></li>	
 		<li><a>Warranty</a></li>
 		<li><a>Reviews</a></li>
-		<li><a>Specs</a></li>
+
 
 	</ul>	
 
@@ -46,7 +47,6 @@
 
 	
 
-	<img id="specs" class="hide" style="margin:0 auto;display:block;width:50%;margin-top: 200px;" src="assets/specs.jpg">
 
    <div id="slides">
 
@@ -175,7 +175,7 @@
 
 
 <table class="tiles-slabs hide">
-	<tr> <h1 id="tile-h1"> DUNO SANDS </h1>
+	<tr> <h1 id="tile-h1" class="hide"> DUNO SANDS </h1>
 		<td class="col">
 			<ul>
 				<% @tiles_duno.each do |tile| %>

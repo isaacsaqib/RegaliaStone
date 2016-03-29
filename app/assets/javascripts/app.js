@@ -14,13 +14,14 @@ $(document).ready(function(){
 	$('.answers').hide();
 	$('#terms').hide();	
 	$('#review-div').hide();
-	$("#specs").hide();
+	// $('#mobile-cust-nav').hide();
+
 
 
 
 	// if(window.innerHeight > window.innerWidth){
- //    alert("Please rotate your mobile device to view this page!");
- //  }
+
+  // }
 
   	//stone-nav fade in 
  //  	$('#nav li:nth-child(1)').on('mouseover', function(){
@@ -136,16 +137,6 @@ $(document).ready(function(){
 			$(".warranty-h1").hide();
 			$("#certifications").hide();			
 
-	})
-
-	// Specs
-	$('#cust-nav li:nth-child(4)').on('click', function(){
-			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.hide').hide();
-			$('#specs').fadeIn();
-			$('#slides').hide();
-			$(".warranty-h1").hide();
-			$("#certifications").hide();
 	})
 
 

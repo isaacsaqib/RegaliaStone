@@ -13,7 +13,9 @@ class WelcomeController < ApplicationController
 		@reviews = Review.all
 	end
 
-
+	def specs
+	end
+	
 
 
 end
