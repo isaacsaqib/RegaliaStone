@@ -1,0 +1,27 @@
+<% if logged_in? %>
+
+<div class="new_div">
+	<ul>
+	<%= form_for @tile, :url => tile_path, :html => { :multipart => true } do |f| %>
+	  <li><%= f.label("Name") %></li>
+	  <%= f.text_field :name %><br>
+	  <li><%= f.label("Description") %></li>
+	  <%= f.text_field :description %><br>
+	  <li><%= f.label("Collection") %></li>
+		<%= f.select :collection, options_for_select([["Select Type", ""], "Duno Sands"]) %>
+	  <li><%= f.label("Type") %>  </li>
+	  <%= f.text_field :type %><br>
+	  <li><%= f.label("Subsection") %>  </li>
+	  <%= f.select :subsection, options_for_select([["Select Type", ""], "Handmade", "Lappato"]) %>
+	  <%= f.file_field :avatar %><br>
+	  <li><%= f.submit %></li>
+	<% end %>	
+	</ul>
+
+</div>
+
+<% else %>
+
+<p>You must be an administrator to access this page, please return to the home site. </p>
+
+<% end %>

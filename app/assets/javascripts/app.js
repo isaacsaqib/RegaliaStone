@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	$('.quarts-slabs').hide()
 	$('.collection-h1').hide()
+	$('#tile-h1').hide()
+	$('#tile-header').hide()
+	$('.tile-slabs').hide()
 	$('#quartz-header').hide();
 	$('#contact-div').hide();
 	$('#granites-slabs').hide();
@@ -11,6 +14,7 @@ $(document).ready(function(){
 	$('.answers').hide();
 	$('#terms').hide();	
 	$('#review-div').hide();
+	$("#specs").hide();
 
 
 
@@ -38,7 +42,7 @@ $(document).ready(function(){
 
 
   	//customer-care
-	$('#nav li:nth-child(4)').on('mouseover', function(){
+	$('#nav li:nth-child(5)').on('mouseover', function(){
 		$('#cust-nav').fadeIn();
 
   	})
@@ -64,30 +68,32 @@ $(document).ready(function(){
 
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.quarts-slabs').fadeIn(2000);
-			$('.collection-h1').fadeIn(2000);
 			$('.hide').hide();
 			$('#slides').hide();
 			$('#quartz-header').show(2000);		
+			$('.collection-h1').fadeIn(2000);
 	})
 
-	// Granite
+	// Tile
 
-	$('#stone-nav li:nth-child(3)').on('click', function(){
+	$('#nav li:nth-child(2)').on('click', function(){
+
 			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.tile-slabs').fadeIn(2000);
 			$('.hide').hide();
-			$('#granites-slabs').fadeIn(2000)
-			$('#granites-header').fadeIn(2000);
-				
+			$('#slides').hide();
+			$('#tile-h1').fadeIn(2000);
+			$('#tile-header').show(2000);		
 	})
-
 	
 	// Contact
 
-	$('#nav li:nth-child(2)').on('click', function(){
+	$('#nav li:nth-child(3)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();	
 			$('#slides').hide();
-	
+			$(".warranty-h1").hide();
+			$("#certifications").hide();
 			$('#contact-div').slideDown();
 		
 	})
@@ -101,7 +107,8 @@ $(document).ready(function(){
 			$('.hide').hide();
 			$('#faq-div').fadeIn();
 			$('#slides').hide();
-
+			$(".warranty-h1").hide();
+			$("#certifications").hide();
 
 	})
 
@@ -114,7 +121,8 @@ $(document).ready(function(){
 			$('#warranty-div').show();
 			$('#terms').show();
 			$('#slides').hide();
-
+			$(".warranty-h1").hide();
+			$("#certifications").hide();
 
 	})
 
@@ -125,7 +133,19 @@ $(document).ready(function(){
 			$('.hide').hide();
 			$('#review-div').fadeIn();
 			$('#slides').hide();
+			$(".warranty-h1").hide();
+			$("#certifications").hide();			
 
+	})
+
+	// Specs
+	$('#cust-nav li:nth-child(4)').on('click', function(){
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
+			$('#specs').fadeIn();
+			$('#slides').hide();
+			$(".warranty-h1").hide();
+			$("#certifications").hide();
 	})
 
 

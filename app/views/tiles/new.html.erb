@@ -4,17 +4,17 @@
 
 <div class="new_div">
 	<ul>
-	<%= form_for @quart, :url => quarts_path, :html => { :multipart => true } do |f| %>
+	<%= form_for @tile, :url => tiles_path, :html => { :multipart => true } do |f| %>
 	  <li><%= f.label("Name") %></li>
 	  <%= f.text_field :name %><br>
 	  <li><%= f.label("Description") %></li>
 	  <%= f.text_field :description %><br>
-	  <li><%= f.label("Alt") %></li>
-	  <%= f.text_field :alt %><br>
-	  <li><%= f.label("Color") %>  </li>
-	  <%= f.text_field :sort_by_color %><br>
-	  <li><%= f.label("Collection") %>  </li>
-	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Marmoreal", "Soft"]) %>
+	  <li><%= f.label("Type") %>  </li>
+	  <%= f.text_field :type %><br>
+	  <li><%= f.label("Collection") %></li>
+		<%= f.select :collection, options_for_select([["Select Type", ""], "Duno Sands"]) %><br>
+	  <li><%= f.label("Subsection") %>  </li>
+	  <%= f.select :subsection, options_for_select([["Select Type", ""], "Handmade", "Lappato"]) %><br>
 	  <%= f.file_field :avatar %><br>
 	  <li><%= f.submit %></li>
 	<% end %>	

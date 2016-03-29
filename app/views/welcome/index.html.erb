@@ -13,8 +13,9 @@
 
 		<a href="#" onClick="window.location.reload();return false;"><%= image_tag 'logo2.png', :id => "logo" %></a>
 
-	<ul id="nav">
+	<ul id="nav">	
 		<li><a>STONE</a></li>	
+		<li><a>TILE</a></li>	
 		<li><a>CONTACT</a></li>
 		<li><a>GALLERY</a></li>
 		<li><a>CUSTOMER CARE</a></li>
@@ -33,6 +34,8 @@
 		<li><a>FAQ</a></li>	
 		<li><a>Warranty</a></li>
 		<li><a>Reviews</a></li>
+		<li><a>Specs</a></li>
+
 	</ul>	
 
 
@@ -41,6 +44,9 @@
 </div>
 	
 
+	
+
+	<img id="specs" style="margin:0 auto;display:block;width:50%;margin-top: 200px;" src="assets/specs.jpg">
 
    <div id="slides">
 
@@ -161,6 +167,34 @@
 
 </div>
 
+
+
+<div id="tile-header" class="hide">
+	<p>Regalia Stone Quartz are hard to beat if you’re looking for a surface that requires minimal maintenance. This durable material stands up to stains, scratches, heat and as a bonus it doesn’t require any type of sealing. It’s an excellent choice for any room in need of a countertop, such as the <em>kitchen</em>, <em>bathroom</em>, <em>laundry room</em> and more. Visit our showroom now to view our beautiful collections in person.</p>
+</div>
+
+
+<table class="tiles-slabs hide">
+	<tr> <h1 id="tile-h1"> DUNO SANDS </h1>
+		<td class="col">
+			<ul>
+				<% @tiles_duno.each do |tile| %>
+				<li>
+					<a href="<%=tile_path(tile)%>">
+						<%= image_tag tile.avatar.url(:medium) %>
+							<p><%=tile.name%></p><br>
+							 <% if logged_in? %>
+							<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
+							<p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>			
+							<% end %>
+				</li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+
 <!-- Quartz Table   -->
 
 <div id="quartz-header" class="hide">
@@ -169,8 +203,8 @@
 
 
 
-<table class="quarts-slabs" class="hide">
-	<tr> <h1 class="collection-h1"> ALL </h1>
+<table class="quarts-slabs hide" >
+	<tr> <h1 class="collection-h1 hide"> ALL </h1>
 		<td class="col">
 			<ul>
 				<% @quarts.each do |quart| %>
@@ -193,8 +227,8 @@
 <!-- Tuscany -->
 
 
-<table class="quarts-slabs" class="hide">
-	<tr> <h1 class="collection-h1"> THE TUSCANY COLLECTION </h1>
+<table class="quarts-slabs hide">
+	<tr> <h1 class="collection-h1 hide"> THE TUSCANY COLLECTION </h1>
 		<td class="col">
 			<ul>
 				<% @quarts_tuscanys.each do |quart| %>
@@ -213,54 +247,10 @@
 	</tr>
 </table>
 
-<!-- Galaxy -->
-
-<table class="quarts-slabs" class="hide">
-	<tr><h1 class="collection-h1"> THE GALAXY SERIES </h1>
-		<td class="col">
-			<ul>
-				<% @quarts_galaxys.each do |quart| %>
-				<li>
-					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
-							<p><%=quart.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
-							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-<!-- Luminous -->
-
-<table class="quarts-slabs" class="hide">
-	<tr><h1 class="collection-h1"> THE LUMINOUS SERIES </h1>
-		<td class="col">
-			<ul>
-				<% @quarts_luminous.each do |quart| %>
-				<li>
-					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
-							<p><%=quart.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
-							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
 <!-- Marmoreal -->
 
-<table class="quarts-slabs" class="hide">
-	<tr><h1 class="collection-h1"> THE MARMOREAL SERIES </h1>
+<table class="quarts-slabs hide">
+	<tr><h1 class="collection-h1 hide"> THE MARMOREAL SERIES </h1>
 		<td class="col">
 			<ul>
 				<% @quarts_marmoreals.each do |quart| %>
@@ -279,11 +269,57 @@
 	</tr>
 </table>
 
+<!-- Galaxy -->
+
+<table class="quarts-slabs hide">
+	<tr><h1 class="collection-h1 hide"> THE GALAXY SERIES </h1>
+		<td class="col">
+			<ul>
+				<% @quarts_galaxys.each do |quart| %>
+				<li>
+					<a href="<%=quart_path(quart)%>">
+						<%= image_tag quart.avatar.url(:medium) %>
+							<p><%=quart.name%></p><br>
+							 <% if logged_in? %>
+							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
+							<% end %>
+				</li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+<!-- Soft Series -->
+
+<table class="quarts-slabs hide">
+	<tr><h1 class="collection-h1 hide">SOFT SERIES </h1>
+		<td class="col">
+			<ul>
+				<% @quarts_soft.each do |quart| %>
+				<li>
+					<a href="<%=quart_path(quart)%>">
+						<%= image_tag quart.avatar.url(:medium) %>
+							<p><%=quart.name%></p><br>
+							 <% if logged_in? %>
+							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
+							<% end %>
+				</li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+
+
 <h1 class="warranty-h1">5 YEAR RESIDENTIAL WARRANTY</h1>
 <h1 class="warranty-h1">10 YEAR COMMERCIAL WARRANTY</h1>
 
 
-<img style="display:block;width:60%;margin:0 auto;"src="assets/warranty.png">
+<img style="display:block;width:60%;margin:0 auto;" id="certifications" src="assets/warranty.png">
 
 
 

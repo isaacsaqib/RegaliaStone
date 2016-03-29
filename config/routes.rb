@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  resources :tiles
   resources :quarts
   resources :granites
   resources :users
   resources :reviews
+
 
   get  "/admin"  => "session#new"
   post "/session"      => "session#create"
