@@ -67,8 +67,8 @@ $(document).ready(function(){
 	$('#nav li:nth-child(1)').on('click', function(){
 
 			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.quarts-slabs').fadeIn(2000);
 			$('.hide').hide();
+			$('.quarts-slabs').fadeIn(2000);
 			$('#slides').hide();
 			$('#quartz-header').show(2000);		
 			$('.collection-h1').fadeIn(2000);
