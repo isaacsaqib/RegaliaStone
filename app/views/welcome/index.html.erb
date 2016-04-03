@@ -181,9 +181,17 @@
 		<td class="col">
 			<ul>
 				<% @tiles_duno.each do |tile| %>
+
+				<% if tile.pictures.first %>
+            	
 				<li>
+            	<!-- listing image pictures -->
+            	<%= link_to image_tag(tile.pictures.first.image.url), tile_path(tile) %>
+            	<% else %>
+              		N/A
+            	<% end %>
 					<a href="<%=tile_path(tile)%>">
-						<%= image_tag tile.avatar.url(:medium) %>
+
 							<p><%=tile.name%></p><br>
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
@@ -197,24 +205,34 @@
 </table>
 
 <table class="tiles-slabs hide">
-	<tr> <h1 class="tile-h1 hide"> VENETIAN HAND MADE COLLECTION</h1>
-		<td class="col">
-			<ul>
-				<% @tiles_venetian.each do |tile| %>
-				<li>
-					<a href="<%=tile_path(tile)%>">
-						<%= image_tag tile.avatar.url(:medium) %>
-							<p><%=tile.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
-							<p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
+<tr> <h1 class="tile-h1 hide"> VENETIAN HAND MADE COLLECTION</h1>
+<td class="col">
+<ul>
+<% @tiles_venetian.each do |tile| %>
+<% if tile.pictures.first %>
+
+<li>
+<%= link_to image_tag(tile.pictures.first.image.url), tile_path(tile) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+<a href="<%=tile_path(tile)%>">
+
+<p><%=tile.name%></p><br>
+<% if logged_in? %>
+<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
+<p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>
+<% end %>
+</li>
+<% end %>
+</ul>
+</td>
+</tr>
 </table>
+
+
+
+
 
 <!-- Quartz Table   -->
 
@@ -234,9 +252,17 @@
 		<td class="col">
 			<ul>
 				<% @quarts_tuscanys.each do |quart| %>
+
+				<% if quart.pictures.first %>
+
 				<li>
+				<!-- listing image pictures -->
+            	<%= link_to image_tag(quart.pictures.first.image.url), quart_path(quart) %>
+            	<% else %>
+              		N/A
+            	<% end %>
 					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
+
 							<p><%=quart.name%></p><br>
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
@@ -250,70 +276,85 @@
 </table>
 
 <!-- Marmoreal -->
-
 <table class="quarts-slabs hide">
-	<tr><h1 class="collection-h1 hide"> THE MARMOREAL SERIES </h1>
+		<tr><h1 class="collection-h1 hide"> THE MARMOREAL SERIES </h1>
 		<td class="col">
-			<ul>
-				<% @quarts_marmoreals.each do |quart| %>
-				<li>
-					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
-							<p><%=quart.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
-							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
+		<ul>
+
+		<% @quarts_marmoreals.each do |quart| %>
+		<% if quart.pictures.first %>
+		<li>
+		<%= link_to image_tag(quart.pictures.first.image.url), quart_path(quart) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+
+		<a href="<%=quart_path(quart)%>">
+		<p><%=quart.name%></p><br>
+		<% if logged_in? %>
+		<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+		<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
+		<% end %>
+		</li>
+		<% end %>
+		</ul>
 		</td>
-	</tr>
+		</tr>
 </table>
 
 <!-- Galaxy -->
 
 <table class="quarts-slabs hide">
-	<tr><h1 class="collection-h1 hide"> THE GALAXY SERIES </h1>
-		<td class="col">
-			<ul>
-				<% @quarts_galaxys.each do |quart| %>
-				<li>
-					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
-							<p><%=quart.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
-							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
+<tr><h1 class="collection-h1 hide"> THE GALAXY SERIES </h1>
+<td class="col">
+<ul>
+<% @quarts_galaxys.each do |quart| %>
+<% if quart.pictures.first %>
+<li>
+<%= link_to image_tag(quart.pictures.first.image.url), quart_path(quart) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+<a href="<%=quart_path(quart)%>">
+<p><%=quart.name%></p><br>
+<% if logged_in? %>
+<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
+<% end %>
+</li>
+<% end %>
+</ul>
+</td>
+</tr>
 </table>
 
 <!-- Soft Series -->
 
 <table class="quarts-slabs hide">
-	<tr><h1 class="collection-h1 hide">SOFT SERIES </h1>
-		<td class="col">
-			<ul>
-				<% @quarts_soft.each do |quart| %>
-				<li>
-					<a href="<%=quart_path(quart)%>">
-						<%= image_tag quart.avatar.url(:medium) %>
-							<p><%=quart.name%></p><br>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
-							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
-							<% end %>
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
+<tr><h1 class="collection-h1 hide">SOFT SERIES </h1>
+<td class="col">
+<ul>
+<% @quarts_soft.each do |quart| %>
+<% if quart.pictures.first %>
+<li>
+<%= link_to image_tag(quart.pictures.first.image.url), quart_path(quart) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+<a href="<%=quart_path(quart)%>">
+<p><%=quart.name%></p><br>
+<% if logged_in? %>
+<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
+<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
+<% end %>
+</li>
+<% end %>
+</ul>
+</td>
+</tr>
 </table>
+
+
 
 
 

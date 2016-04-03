@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325213523) do
+ActiveRecord::Schema.define(version: 20160403210407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 20160325213523) do
     t.string   "sort_by_color"
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.string   "description"
+    t.string   "image"
+    t.integer  "product_id"
+    t.string   "product_token"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "quart_id"
+    t.string   "tile_id"
+  end
+
   create_table "quarts", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -41,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160325213523) do
     t.string   "alt"
     t.string   "sort_by_color"
     t.string   "collection"
+    t.string   "token"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -61,6 +77,7 @@ ActiveRecord::Schema.define(version: 20160325213523) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "token"
   end
 
   create_table "users", force: :cascade do |t|

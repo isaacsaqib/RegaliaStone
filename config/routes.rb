@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :granites
   resources :users
   resources :reviews
+  resources :pictures
 
   get "/warranty" => "welcome#warranty"
   get "/specs" => "welcome#specs"

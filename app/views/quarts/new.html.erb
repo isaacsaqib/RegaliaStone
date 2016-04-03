@@ -15,7 +15,7 @@
 	  <%= f.text_field :sort_by_color %><br>
 	  <li><%= f.label("Collection") %>  </li>
 	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Marmoreal", "Soft"]) %>
-	  <%= f.file_field :avatar %><br>
+ 	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
 	  <li><%= f.submit %></li>
 	<% end %>	
 	</ul>

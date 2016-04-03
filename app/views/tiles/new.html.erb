@@ -15,7 +15,7 @@
 		<%= f.select :collection, options_for_select([["Select Type", ""], "Duno Sands","Venetian"]) %><br>
 	  <li><%= f.label("Subsection") %>  </li>
 	  <%= f.select :subsection, options_for_select([["Select Type", ""], "Handmade", "Lappato"]) %><br>
-	  <%= f.file_field :avatar %><br>
+ 	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
 	  <li><%= f.submit %></li>
 	<% end %>	
 	</ul>

@@ -12,16 +12,30 @@ class QuartsController < ApplicationController
 
 	def create
 	@quart = Quart.new(quart_params)
-		if @quart.save
-			redirect_to "/"
-		else
-			render :new 
-		end
+		respond_to do |format|
+			if @quart.save
+				if params[:images]
+					params[:images].each {|image|
+						@quart.pictures.create(image: image)
+					}
+
+				end
+
+		format.html { redirect_to @quart, notice: 'quart was successfully created.' }
+      format.json { render json: @quart, status: :created, location: @quart }
+    else
+      format.html { render action: "new" }
+      format.json { render json: @quart.errors, status: :unprocessable_entity }
+    end
+  end
+
+
 
 	end
 
 	def show
 		@quart = Quart.find(params[:id])
+		@pictures_quart = @quart.pictures
 	end
 
 
@@ -32,11 +46,21 @@ class QuartsController < ApplicationController
 	def update
 		@quart = Quart.find(params[:id])
 
-			if @quart.update(quart_params)
-				redirect_to "/"
-			else
-				render 'edit'
-			end
+	    respond_to do |format|
+	      if @quart.update_attributes(quart_params)
+	        if params[:images]
+	          # The magic is here ;)
+	          params[:images].each { |image|
+	            @quart.pictures.create(image: image)
+	          }
+	        end
+	        format.html { redirect_to @quart, notice: 'quart was successfully updated.' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: "edit" }
+	        format.json { render json: @quart.errors, status: :unprocessable_entity }
+	      end
+	    end
 	end
 
 	def destroy
@@ -50,7 +74,7 @@ class QuartsController < ApplicationController
 	private
 
 	def quart_params
-		params.require(:quart).permit(:name, :description, :avatar, :alt, :sort_by_color, :collection)
+		params.require(:quart).permit(:name, :description, :images, :pictures, :alt, :sort_by_color, :collection)
 
 	end
 

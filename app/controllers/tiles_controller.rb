@@ -12,16 +12,29 @@ class TilesController < ApplicationController
 
 	def create
 	@tile = Tile.new(tile_params)
-		if @tile.save
-			redirect_to "/"
-		else
-			render :new 
-		end
+		respond_to do |format|
+			if @tile.save
+				if params[:images]
+					params[:images].each {|image|
+						@tile.pictures.create(image: image)
+					}
+
+				end
+
+		format.html { redirect_to @tile, notice: 'tile was successfully created.' }
+      format.json { render json: @tile, status: :created, location: @tile }
+    else
+      format.html { render action: "new" }
+      format.json { render json: @tile.errors, status: :unprocessable_entity }
+    end
+  end
 
 	end
 
 	def show
 		@tile = Tile.find(params[:id])
+
+    	@pictures_tile = @tile.pictures
 	end
 
 
@@ -32,11 +45,21 @@ class TilesController < ApplicationController
 	def update
 		@tile = Tile.find(params[:id])
 
-			if @tile.update(tile_params)
-				redirect_to "/"
-			else
-				render 'edit'
-			end
+	    respond_to do |format|
+	      if @tile.update_attributes(tile_params)
+	        if params[:images]
+	          # The magic is here ;)
+	          params[:images].each { |image|
+	            @tile.pictures.create(image: image)
+	          }
+	        end
+	        format.html { redirect_to @tile, notice: 'tile was successfully updated.' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: "edit" }
+	        format.json { render json: @tile.errors, status: :unprocessable_entity }
+	      end
+	    end
 	end
 
 	def destroy
@@ -48,7 +71,7 @@ class TilesController < ApplicationController
 	private
 
 	def tile_params
-		params.require(:tile).permit(:name, :description, :collection, :type, :avatar, :subsection)
+		params.require(:tile).permit(:name, :description, :images, :pictures, :collection, :type, :subsection)
 
 	end
 

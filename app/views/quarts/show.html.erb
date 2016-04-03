@@ -4,9 +4,23 @@
 <div id="quart-show-div">
 	<ul>
 		<li><p><%=@quart.name%></p><br></li>
-		<li><%= image_tag @quart.avatar.url(:original) %></li>
+
 		<p>Specifications</p>
 		<li><p><%=@quart.description%><br></p></li>
 	</ul>
+
+	<% @pictures_quart.each do |pic| %>
+      <li><%= image_tag pic.image.url %></li>
+      <%= pic.description %>
+
+
+
+      <% if logged_in? %>
+      <%= link_to "Edit picture", picture_path(pic) %>
+
+      <% end %>
+
+     
+<% end %> 
 </div>
 </body>

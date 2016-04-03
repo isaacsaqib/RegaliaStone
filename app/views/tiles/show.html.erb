@@ -1,0 +1,26 @@
+<body style="background-image:none;">
+
+
+<div id="quart-show-div">
+	<ul>
+		<li><p><%=@tile.name%></p><br></li>
+
+		<p>Specifications</p>
+		<li><p><%=@tile.description%><br></p></li>
+	</ul>
+
+	<% @pictures_tile.each do |pic| %>
+      <li><%= image_tag pic.image.url %></li>
+      <%= pic.description %>
+
+
+
+      <% if logged_in? %>
+      <%= link_to "Edit picture", picture_path(pic) %>
+
+      <% end %>
+
+     
+<% end %> 
+</div>
+</body>
