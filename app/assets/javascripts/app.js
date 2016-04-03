@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('.collection-h1').hide()
 	$('.tile-h1').hide()
 	$('#tile-header').hide()
-	$('.tile-slabs').hide()
+	$('.tiles-slabs').hide()
 	$('#quartz-header').hide();
 	$('#contact-div').hide();
 	$('#granites-slabs').hide();
@@ -76,10 +76,10 @@ $(document).ready(function(){
 	$('#nav li:nth-child(2)').on('click', function(){
 
 			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.tile-slabs').fadeIn(2000);
 			$('.hide').hide();
-			$('.tile-h1').fadeIn(2000);
+			$('.tiles-slabs').fadeIn(2000);
 			$('#tile-header').show(2000);		
+			$('.tile-h1').fadeIn(2000);
 	})
 	
 	// Contact
