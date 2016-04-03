@@ -33,6 +33,7 @@
 	<!-- </ul> -->
 
 	<ul id="cust-nav">
+		<li><a>Care And Maintainence</a></li>	
 		<li><a>FAQ</a></li>	
 		<li><a>Reviews</a></li>
 
@@ -48,7 +49,7 @@
 	
 
 
-   <div id="slides">
+   <div id="slides" class="hide">
 
 
   	<img src="assets/SLIDE1-a06e7c38f13052b8a277ad658a201257ba4ff17be4cdeea1e32f32d96031c93a.jpg">
@@ -176,7 +177,7 @@
 
 
 <table class="tiles-slabs hide">
-	<tr> <h1 id="tile-h1" class="hide"> DUNO SANDS </h1>
+	<tr> <h1 class="tile-h1 hide"> DUNO SANDS </h1>
 		<td class="col">
 			<ul>
 				<% @tiles_duno.each do |tile| %>
@@ -195,6 +196,25 @@
 	</tr>
 </table>
 
+<table class="tiles-slabs hide">
+	<tr> <h1 class="tile-h1 hide"> VENETIAN HAND MADE COLLECTION</h1>
+		<td class="col">
+			<ul>
+				<% @tiles_duno.each do |tile| %>
+				<li>
+					<a href="<%=tile_path(tile)%>">
+						<%= image_tag tile.avatar.url(:medium) %>
+							<p><%=tile.name%></p><br>
+							 <% if logged_in? %>
+							<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
+							<p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>			
+							<% end %>
+				</li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+</table>
 
 <!-- Quartz Table   -->
 
@@ -297,13 +317,43 @@
 
 
 
-<h1 class="warranty-h1">5 YEAR RESIDENTIAL WARRANTY</h1>
-<h1 class="warranty-h1">10 YEAR COMMERCIAL WARRANTY</h1>
-
 
 <img style="display:block;width:60%;margin:0 auto;" id="certifications" src="assets/warranty.png">
 
+<!-- Care And Maintainence -->
 
+<div id="care_and_maintainence" class="hide" style="padding:0px 200px 0px 200px">
+	<h1 style="padding-top: 200px;color:black;text-align: left;">Product Care And Maintenance</h1>
+	
+	<p><em>
+	Maintaining Quartz is easy. Simply wash with warm water and soap if desired.
+	</em></p>
+
+	<p>
+	<b>DO NOT</b>  use abrasive or strong alkaline or acid or free radicals or oxidizers or the like (whether high, neutral or low pH) cleaners.
+	</p>
+
+	<p>
+	<b>No Quartz</b> Stone is  heat proof, chemical proof or fracture proof in any form..
+	</p>
+
+	<p>
+	<b>DO NOT</b> use or expose the Quartz surface to such products including, but not limited to bleach, oven cleaners, Comet®, Soft Scrub®, SOS®, products with pumice, batteries, paint removers, furniture strippers, tarnish or silver cleaners, or the like. DO NOT use abrasive or harsh scrub pads. DO NOT apply any sealers, penetrants or topical. Such products will wear off and cause the gloss to appear dull or inconsistent.
+	</p>
+	<ul id="care-list">
+		<li><p>
+		<b>1.</b>       Regalia Stone is pure natural quartz. Variation in the natural stone (quartz) color, pattern, size, shape and shade are inherent and unique characteristics to be expected with this Product. This does not affect the Product performance in any manner.
+		</p></li>
+
+		<li><p>
+		<b>2.</b>       Regalia Stone’s Quartz is durable and more resistant to surface damage than other stone. However, all stone can be damaged by force and no stone is chip-proof. Objects hitting edges particularly at sinks or dishwashers may cause chips.
+		</p></li>
+
+		<li><p>
+		<b>3.</b>       Natural stone surfaces can be damaged by sudden and/or rapid change of temperature especially near the edges, as well as direct and/or sustained heating of the top. Quartz may not withstand the direct transfer of heat from pots and pans and other cooking units such as electric frying pans and griddles, and some crockpots or roaster ovens and heat lamps. Therefore, the use of a hot pad or trivet is always recommended.
+		</p></li>
+	</ul>
+</div>
 
 <!-- FAQ page -->
 
@@ -385,7 +435,7 @@
 </div>
 
 
-<div id="footer-div" >
+<!-- <div id="footer-div" >
 	<ul>
 
 		<li><p>1980 New Highway</p></li>
@@ -397,7 +447,7 @@
 
 	</ul>
 
-</div>
+</div> -->
 
 
 

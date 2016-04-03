@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('.quarts-slabs').hide()
 	$('.collection-h1').hide()
-	$('#tile-h1').hide()
+	$('.tile-h1').hide()
 	$('#tile-header').hide()
 	$('.tile-slabs').hide()
 	$('#quartz-header').hide();
@@ -14,6 +14,7 @@ $(document).ready(function(){
 	$('.answers').hide();
 	$('#terms').hide();	
 	$('#review-div').hide();
+	$('#care_and_maintainence').hide();
 	// $('#mobile-cust-nav').hide();
 
 
@@ -35,11 +36,7 @@ $(document).ready(function(){
 
 	$('#nav li:nth-child(3)').on('mouseover', function(){
 		$('#cust-nav').fadeOut();
-	})
-
-	$('#nav li:nth-child(4)').on('mouseover', function(){
-		$('#stone-nav').fadeOut();
-	})
+	});
 
 
   	//customer-care
@@ -70,7 +67,6 @@ $(document).ready(function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('.quarts-slabs').fadeIn(2000);
-			$('#slides').hide();
 			$('#quartz-header').show(2000);		
 			$('.collection-h1').fadeIn(2000);
 	})
@@ -82,8 +78,7 @@ $(document).ready(function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.tile-slabs').fadeIn(2000);
 			$('.hide').hide();
-			$('#slides').hide();
-			$('#tile-h1').fadeIn(2000);
+			$('.tile-h1').fadeIn(2000);
 			$('#tile-header').show(2000);		
 	})
 	
@@ -92,8 +87,6 @@ $(document).ready(function(){
 	$('#nav li:nth-child(3)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();	
-			$('#slides').hide();
-			$(".warranty-h1").hide();
 			$("#certifications").hide();
 			$('#contact-div').slideDown();
 		
@@ -101,14 +94,21 @@ $(document).ready(function(){
 
 	//-----Customer Care----
 
-	// FAQ
+	// Care And Maintainence
 
 	$('#cust-nav li:nth-child(1)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
+			$('#care_and_maintainence').fadeIn();
+
+			$("#certifications").hide();
+
+	})
+
+	$('#cust-nav li:nth-child(2)').on('click', function(){
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
 			$('#faq-div').fadeIn();
-			$('#slides').hide();
-			$(".warranty-h1").hide();
 			$("#certifications").hide();
 
 	})
@@ -117,26 +117,15 @@ $(document).ready(function(){
 
 	//Reviews
 
-	$('#cust-nav li:nth-child(2)').on('click', function(){
+	$('#cust-nav li:nth-child(3)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('#review-div').fadeIn();
-			$('#slides').hide();
-			$(".warranty-h1").hide();
 			$("#certifications").hide();			
 
 	})
 
 
-	//View our latest styles button 
-	$("#front-page-button").on("click", function(){
-
-			$('body').css('background-image', 'none').css('background-color', 'white');
-			$('.hide').hide();
-			$('#quartz-slabs').fadeIn(2000)
-			$('#quartz-header').show(2000);
-	
-	})
 
 
 	//questions
