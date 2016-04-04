@@ -1,23 +1,37 @@
 <body style="background-image:none;">
 
+<script>
+	 if 
+	 	( $("img[alt*='Calcatta extra']") || $("img[alt*='Calcatta extra1']") || $("img[alt*='Calcatta extra3']") )  
+
+	 {
+
+	 $( "img[alt*='Calcatta extra']").css("width", "20%"), 
+	 $( "img[alt*='Calcaata extra3']").css("width", "20%"),
+	 $( "img[alt*='Calcattta extra1']").css("width", "20%")
+
+	 };
+
+</script>
+
+
 
 <div id="quart-show-div">
 	<ul>
-		<li><p><%=@quart.name%></p><br></li>
+		<li><h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;"><%=@quart.name%></h1><br></li>
 
-		<p>Specifications</p>
+		<!-- <p>Specifications</p> -->
 		<li><p><%=@quart.description%><br></p></li>
-	</ul>
 
 	<% @pictures_quart.each do |pic| %>
-      <li><%= image_tag pic.image.url %></li>
+      <li>      <a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
       <%= pic.description %>
 
 
 
       <% if logged_in? %>
-      <%= link_to "Edit picture", picture_path(pic) %>
 
+	</ul>
       <% end %>
 
      
