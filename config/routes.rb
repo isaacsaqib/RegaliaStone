@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :tiles
   resources :quarts
   resources :granites
-  resources :users
+  # resources :users
   resources :reviews
   resources :pictures
 

@@ -10,7 +10,7 @@ class SessionController < ApplicationController
     if user && user.authenticate(params[:password])
       # store user id in session
       session[:user_id] = user.id
-      redirect_to("/")
+      redirect_to("/admin")
     else
       # rerender the login form
       render(:new)
