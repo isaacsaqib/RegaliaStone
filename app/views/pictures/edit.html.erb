@@ -1,4 +1,6 @@
 
+
+<% if logged_in? %>
   <h1 class="h1-headers">Edit Picture</h1>
 
 
@@ -20,3 +22,8 @@
 
 <% end %>
 
+<% else %>
+
+Please login to view this page 
+
+<% end %>
