@@ -74,7 +74,7 @@ class QuartsController < ApplicationController
 	private
 
 	def quart_params
-		params.require(:quart).permit(:name, :description, :images, :pictures, :alt, :sort_by_color, :collection)
+		params.require(:quart).permit(:name, :description, :images, :pictures, :alt, :sort_by_color, :collection, :size, :finish, :thickness)
 
 	end
 

@@ -5,21 +5,22 @@
 
 
 <%= form_for @picture do |f| %>
+<ul class="picture-details-list">
+	
 
-    <%= image_tag @picture.image.url %><br>
-    <%= f.label :description %>
+	<button id="delete-picture"><%= link_to "Delete picture", @picture, :method => :delete,
+   	                                  data: { confirm: "You sure?" } %></button>
+    <li><%= image_tag @picture.image.url %></li><br>
 
-    <%= f.text_field :description%><br>
 
-   
-  	<%= link_to "Delete picture", @picture, :method => :delete,
-                                      data: { confirm: "You sure?" } %>
+    <li><%= f.text_field :description, :placeholder => "Enter Caption" %></li><br>
+
 
   
  
     <%= f.submit  %>
 
-
+</ul>
 <% end %>
 
 <% else %>
@@ -27,3 +28,5 @@
 Please login to view this page 
 
 <% end %>
+
+    

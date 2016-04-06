@@ -13,6 +13,10 @@
 	  <%= f.text_field :type %><br>
 	  <li><%= f.label("Subsection") %>  </li>
 	  <%= f.select :subsection, options_for_select([["Select Type", ""], "Handmade", "Lappato"]) %>
+	  <li><%= f.label("Finish") %>  </li>
+	  <%= f.text_field :finish %><br>
+	  <li><%= f.label("Size") %>  </li>
+	  <%= f.text_field :size %><br>
  	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
 	  <li><%= f.submit %></li>
 	<% end %>	

@@ -1,30 +1,11 @@
-<% if logged_in? %>
-  <h1 class="h1-headers">Edit Picture</h1>
 
 
-<%= form_for @picture do |f| %>
 
-  	<button id="delete-picture"><%= link_to "Delete picture", @picture, :method => :delete,
-                                      data: { confirm: "You sure?" } %></button>
+
+
+
+  	
 
   
-    <%= image_tag @picture.image.url, :class => "picture-edit" %><br>
-    <ul class="picture-details-list">
+    <a href="/pictures/<%=@picture.id%>/edit"><%= image_tag @picture.image.url, :class => "picture-edit" %></a><br>
 
-
-    <li><%= f.text_field :description, :placeholder => "Enter Caption" %></li><br>
-
-    <li><%= f.submit  %></li><br><br><br><br><br>
-
-    <hr>
-    
- 
-    </ul>
-
-<% end %>
-
-<% else %>
-
-<p>Please login to view this page</p>
-
-<% end %>

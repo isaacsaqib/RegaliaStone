@@ -13,6 +13,12 @@
 	  <%= f.text_field :alt %><br>
 	  <li><%= f.label("Color") %>  </li>
 	  <%= f.text_field :sort_by_color %><br>
+	  <li><%= f.label("Finish") %>  </li>
+	  <%= f.text_field :finish %><br>
+	  <li><%= f.label("Size") %>  </li>
+	  <%= f.text_field :size %><br>
+	  <li><%= f.label("Thickness") %>  </li>
+	  <%= f.text_field :thickness %><br>
 	  <li><%= f.label("Collection") %>  </li>
 	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Marmoreal", "Soft"]) %>
  	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
