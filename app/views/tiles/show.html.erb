@@ -9,13 +9,14 @@
 		<!-- <p>Specifications</p> -->
 
 	<% @pictures_tile.each do |pic| %>
-      <li>      <a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
-      <%= pic.description %>
+      <% if logged_in? %>
+      <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
+            <li><p><%= pic.description %></p></li>
 
-
-
-
-
+     <% else %>
+      <li><%= image_tag pic.image.url %></a></li>
+      <li><p><%= pic.description %></p></li>
+      <% end %>
       <% end %>
       	<li><p><b>Collection:</b> <%=@tile.collection %></p></li>
 		<li><p><b>Description:</b> <%=@tile.description %></p></li>

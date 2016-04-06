@@ -23,9 +23,14 @@
 		<!-- <p>Specifications</p> -->
 
 	<% @pictures_quart.each do |pic| %>
+	<% if logged_in? %>
       <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
-      <li><p><%= pic.description %></p></li>
+            <li><p><%= pic.description %></p></li>
 
+     <% else %>
+      <li><%= image_tag pic.image.url %></a></li>
+      <li><p><%= pic.description %></p></li>
+      <% end %>
       <% end %>
 
 
