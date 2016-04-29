@@ -13,19 +13,13 @@
 		<!-- <p>Specifications</p> -->
 
 	<% @pictures_tile.each do |pic| %>
-      <% if logged_in? %>
       <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
-            <li><p><%= pic.description %></p></li>
-
-     <% else %>
-      <li><%= image_tag pic.image.url %></a></li>
-      <li><p><%= pic.description %></p></li>
-      <% end %>
-      <% end %>
-      	<li><p><b>Collection:</b> <%=@tile.collection %></p></li>
+        <li><p><%= pic.description %></p></li>
+        <li><p><b>Collection:</b> <%=@tile.collection %></p></li>
         <li><p><b>Finished Surface:</b> <%=@tile.finish%></p></li>
         <li><p><b>Size:</b> <%=@tile.size%></p></li>
 
+      <% end %>
 
 	</ul>
 
