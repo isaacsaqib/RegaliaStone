@@ -16,7 +16,7 @@
 
 
 <div id="header"> 
-		<a href="http://www.regaliastone.com"><%= image_tag 'logo2.png', :id => "logo" %></a>
+		<a href="http://www.regaliastone.com"><%= image_tag 'logo.jpg', :id => "logo" %></a>
 </div>
 
 <hr style="margin-top:50px;">
@@ -28,14 +28,14 @@
 		<!-- <p>Specifications</p> -->
 
 	<% @pictures_quart.each do |pic| %>
-	<% if logged_in? %>
+
       <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
             <li><p><%= pic.description %></p></li>
 
-     <% else %>
+
       <li><%= image_tag pic.image.url %></a></li>
       <li><p><%= pic.description %></p></li>
-      <% end %>
+
       <% end %>
 
 

@@ -8,8 +8,8 @@
 <ul class="picture-details-list">
 	
 
-	<button id="delete-picture"><%= link_to "Delete picture", @picture, :method => :delete,
-   	                                  data: { confirm: "You sure?" } %></button>
+	<li><%= link_to "Delete picture", @picture, :id => "delete-picture", :method => :delete, data: { confirm: "You sure?" } %></li>
+
     <li><%= image_tag @picture.image.url %></li><br>
 
 

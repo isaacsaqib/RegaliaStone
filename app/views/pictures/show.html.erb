@@ -1,11 +1,7 @@
 
-
-
-
-
-
-  	
-
-  
-    <a href="/pictures/<%=@picture.id%>/edit"><%= image_tag @picture.image.url, :class => "picture-edit" %></a><br>
+	<% if logged_in? %>
+    	<a href="/pictures/<%=@picture.id%>/edit"><%= image_tag @picture.image.url, :class => "picture-edit" %></a><br>
+    <% else %>
+    	<%= image_tag @picture.image.url, :class => "picture-edit" %>
+    <% end %>
 
