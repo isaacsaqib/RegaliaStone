@@ -4,27 +4,21 @@
     <a href="http://www.regaliastone.com"><%= image_tag 'logo.jpg', :id => "logo" %></a>
 </div>
 
-<hr style="margin-top:50px;">
-
-<div class="quart-show-div">
-	<ul>
-		<li><h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;"><%=@tile.name%></h1><br></li>
-
-		<!-- <p>Specifications</p> -->
-
-	<% @pictures_tile.each do |pic| %>
-      <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
-        <li><p><%= pic.description %></p></li>
-
-  <% end %>
-        <li><p><b>Collection:</b> <%=@tile.collection %></p></li>
-        <li><p><b>Finished Surface:</b> <%=@tile.finish%></p></li>
-        <li><p><b>Size:</b> <%=@tile.size%></p></li>
 
 
-	</ul>
+  <div id="tile-show-div">
+  		<h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;margin:0px"><%=@tile.name%></h1><br>
+      <ul>
+      	<% @pictures_tile.each do |pic| %>
+              <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
+              <li><p><%= pic.description %></p></li>
+        <% end %>
+    	</ul>
 
-     
+          <p><b>Collection:</b> <%=@tile.collection %></p>
+          <p><b>Finished Surface:</b> <%=@tile.finish%></p>
+          <p><b>Size:</b> <%=@tile.size%></p>
+  </div>
 
-</div>
+
 </body>
