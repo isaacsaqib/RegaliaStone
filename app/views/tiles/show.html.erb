@@ -7,7 +7,7 @@
 
 
   <div id="tile-show-div">
-  		<h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;margin:0px"><%=@tile.name%></h1><br>
+  		<h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;margin-top:80px"><%=@tile.name%></h1><br>
       <ul>
       	<% @pictures_tile.each do |pic| %>
               <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
