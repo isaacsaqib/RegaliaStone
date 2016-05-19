@@ -424,14 +424,12 @@ td ul {
 
 #quartz-header p {
   padding: 135px 500px 0px 500px;
-
   text-align: center;
   font-family: 'AdelleSans-Thin';
 }
 
 #tile-header p {
   padding: 135px 500px 0px 500px;
-
   text-align: center;
   font-family: 'AdelleSans-Thin';
 }
@@ -739,6 +737,10 @@ font-style: italic;
   #tile-header > p {
   padding: 120px 200px 100px 200px;
 
+  }
+
+  #tile-header {
+    margin-top:700px;
   }
 
   #quartz-header {
