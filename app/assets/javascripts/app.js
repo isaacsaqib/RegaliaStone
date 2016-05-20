@@ -15,6 +15,8 @@ $(document).ready(function(){
 	$('#terms').hide();	
 	$('#review-div').hide();
 	$('#care_and_maintainence').hide();
+	$('#tile-header-picture').hide();
+
 	// $('#mobile-cust-nav').hide();
 
 
@@ -79,6 +81,7 @@ $(document).ready(function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
 			$('.tiles-slabs').fadeIn(2000);
+			$('#tile-header-picture').fadeIn();
 			$('#tile-header').show(2000);		
 			$('.tile-h1').fadeIn(2000);
 	})
