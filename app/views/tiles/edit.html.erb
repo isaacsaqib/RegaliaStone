@@ -1,11 +1,9 @@
 <% if logged_in? %>
-<a style="color:white;font-size:20px;padding-left:20px;" href="/admin"> Back </a>
-
 
 <div class="new_div">
 	<ul>
-	<%= form_for @tile, :url => tiles_path, :html => { :multipart => true } do |f| %>
-	  <li><%= f.label("Name") %></li>
+	<%= form_for @tile, :url => tile_path, :html => { :multipart => true } do |f| %>
+	 <li><%= f.label("Name") %></li>
 	  <%= f.text_field :name %><br>
 	  <li><%= f.label("Description") %></li>
 	  <%= f.text_field :description %><br>
@@ -29,3 +27,5 @@
 <p>You must be an administrator to access this page, please return to the home site. </p>
 
 <% end %>
+
+
