@@ -18,7 +18,7 @@
 	  <li><%= f.label("Thickness") %>  </li>
 	  <%= f.text_field :thickness %><br>
 	  <li><%= f.label("Collection") %>  </li>
-	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Marmoreal", "Soft"]) %>
+	  <%= f.select :collection, options_for_select([["Select Type", ""], "Tuscany", "Galaxy", "Marmoreal", "Soft", "Gallery"]) %>
  	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
 	  <li><%= f.submit %></li>
 	<% end %>	

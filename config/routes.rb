@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :pictures
 
+  get "/gallery" =>"welcome#gallery"
   get "/warranty" => "welcome#warranty"
   get "/specs" => "welcome#specs"
   get  "/admin"  => "session#new"

@@ -1,0 +1,13 @@
+<table class="quarts-slabs">
+<td class="col">
+<ul>
+<% @gallery.each do |quart| %>
+<% if quart.pictures.first %>
+<li>
+<%= link_to image_tag(quart.pictures.first.image.url), quart_path(quart) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+<a href="<%=quart_path(quart)%>">
+<p><%=quart.name%></p><br>
+<% end %>

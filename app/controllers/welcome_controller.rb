@@ -17,6 +17,13 @@ class WelcomeController < ApplicationController
 	def specs
 	end
 
+	def gallery
+			@gallery = Quart.where(:collection => "Gallery")
+			
+
+	end
+
+
 	def warranty
 
 		@quarts = Quart.all
