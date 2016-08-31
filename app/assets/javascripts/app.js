@@ -92,7 +92,7 @@ $(document).ready(function(){
 
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();
-			$('.mosaics-show-div').fadeIn(2000);
+			$('.mosaics-slabs').fadeIn(2000);
 
 	})
 	

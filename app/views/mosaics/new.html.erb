@@ -10,13 +10,13 @@
 	  <li><%= f.label("Description") %></li>
 	  <%= f.text_field :description %><br>
 	  <li><%= f.label("Collection") %></li>
-		<%= f.select :collection, options_for_select([["Select Type", ""], "Duno Sands","Venetian"]) %><br>
+		<%= f.select :collection, options_for_select([["Select Type", ""], "Duno Sands","Venetian", "Urban Series", "Elegante Series", "Cafe Series", "Listello Series"]) %><br>
 	  <li><%= f.label("Subsection") %>  </li>
 	  <%= f.select :subsection, options_for_select([["Select Type", ""], "Handmade", "High Definition Ink Jet Technology"]) %><br>
 	  <li><%= f.label("Finish") %>  </li>
-	  <%= f.select :finish, options_for_select([["Select Type", ""], "Lappato", "Matte", "Gloss"]) %><br>
+	  <%= f.select :finish, options_for_select([["Select Type", ""], "Gloss"]) %><br>
 	  <li><%= f.label("Size") %>  </li>
-	  <%= f.select :size, options_for_select([["Select Type", ""], "12 x 24 | 24 x 24 | 18 x 36 "]) %><br>
+	  <%= f.select :size, options_for_select([["Select Type", ""], "12 x 12 Square | 1.3  | 18 x 36 "]) %><br>
  	<%= file_field_tag "images[]", type: :file, multiple: true %><br><br>
 	  <li><%= f.submit %></li>
 	<% end %>	
