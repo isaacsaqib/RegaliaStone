@@ -7,9 +7,11 @@
 
     @quart = Quart.find(params[:id])
     @tile = Tile.find(params[:id])
+    @mosaic = Mosaic.find(params[:id])
 
     @pictures_quarts = @quart.pictures
     @pictures_tile = @tile.pictures
+    @pictures_mosaic = @mosaic.pictures
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,9 +35,11 @@
   def new
     @quart = Quart.find(params[:quart_id])
     @tile = Tile.find(params[:tile_id])
+    @mosaic = Mosaic.find(params[:mosaic_id])
 
     @picture_quarts = @quart.pictures.build
     @picture_tiles = @tile.pictures.build
+    @picture_mosaics = @mosaic.pictures.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -106,6 +110,6 @@
   private
 
   def picture_params
-    params.require(:picture).permit(:description, :quart_id, :tile_id, :image)
+    params.require(:picture).permit(:description, :quart_id, :tile_id, :mosaic_id, :image)
   end
 end

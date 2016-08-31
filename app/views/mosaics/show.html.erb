@@ -1,0 +1,25 @@
+<body style="background-image:none;">
+
+<div id="header"> 
+    <a href="javascript:history.back()"><%= image_tag 'logo.jpg', :id => "logo" %></a>
+</div>
+
+
+
+  <div id="tile-show-div">
+  		<h1 style="text-align: center;color:black;font-family: 'Josefin Sans';font-size:80px;margin-top:80px"><%=@mosaic.name%></h1><br>
+      <ul>
+      	<% @pictures_mosaic.each do |pic| %>
+              <li><a href="/pictures/<%=pic.id%>"><%= image_tag pic.image.url %></a></li>
+              <li><p><%= pic.description %></p></li>
+        <% end %>
+    	</ul>
+
+          <p><b>Description:</b> <%=@mosaic.description %></p><br>
+          <p><b>Collection:</b> <%=@mosaic.collection %></p><br>
+          <p><b>Finished Surface:</b> <%=@mosaic.finish%></p><br>
+          <p><b>Size:</b> <%=@mosaic.size%></p>
+  </div>
+
+
+</body>

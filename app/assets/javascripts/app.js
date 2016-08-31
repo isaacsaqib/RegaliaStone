@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 // -------Stone-------
 
-	// Quarts 
+	// QUARTS 
 
 	$('#nav li:nth-child(1)').on('click', function(){
 
@@ -74,7 +74,7 @@ $(document).ready(function(){
 			$('.collection-h1').fadeIn(2000);
 	})
 
-	// Tile
+	// TILES
 
 	$('#nav li:nth-child(2)').on('click', function(){
 
@@ -85,10 +85,20 @@ $(document).ready(function(){
 			$('#tile-header').show(2000);		
 			$('.tile-h1').fadeIn(2000);
 	})
+
+	// MOSAICS
+
+	$('#nav li:nth-child(3)').on('click', function(){
+
+			$('body').css('background-image', 'none').css('background-color', 'white');
+			$('.hide').hide();
+			$('.mosaics-show-div').fadeIn(2000);
+
+	})
 	
 	// Contact
 
-	$('#nav li:nth-child(3)').on('click', function(){
+	$('#nav li:nth-child(4)').on('click', function(){
 			$('body').css('background-image', 'none').css('background-color', 'white');
 			$('.hide').hide();	
 			$("#certifications").hide();
