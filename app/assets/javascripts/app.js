@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('.quarts-slabs').hide()
+	$('.mosaics-slabs').hide()
 	$('.collection-h1').hide()
 	$('.tile-h1').hide()
 	$('#tile-header').hide()

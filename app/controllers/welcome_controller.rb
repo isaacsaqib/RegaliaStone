@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
 	def index
 		@quarts = Quart.all
+		@granites = Granite.all
+		@reviews = Review.all
+		@mosaics = Mosaic.all
 
 	@quarts_tuscanys = Quart.where(:collection => "Tuscany")
 	@quarts_galaxys = Quart.where(:collection => "Galaxy")
@@ -8,10 +11,9 @@ class WelcomeController < ApplicationController
 	@quarts_marmoreals = Quart.where(:collection => "Marmoreal")
 	@tiles_duno = Tile.where(:collection => "Duno Sands")
 	@tiles_venetian = Tile.where(:collection => "Venetian")
+	
 
 
-		@granites = Granite.all
-		@reviews = Review.all
 	end
 
 	def specs

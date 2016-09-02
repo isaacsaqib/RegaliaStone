@@ -74,7 +74,7 @@ class MosaicsController < ApplicationController
 	private
 
 	def mosaic_params
-		params.require(:mosaic).permit(:name, :description, :images, :pictures, :collection, :size, :finish, :subsection)
+		params.require(:mosaic).permit(:name, :description, :images, :pictures, :collection, :size, :finish, :subsection, :material, :soldby)
 
 	end
 

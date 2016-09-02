@@ -359,9 +359,28 @@
 <!-- MOSAICS -->
 
 <table class="mosaics-slabs hide">
-<h1 style="color:black;">Coming soon.</h1>
+<tr><h1 class="collection-h1 hide">SOFT SERIES </h1>
+<td class="col">
+<ul>
+<% @mosaics.each do |mosaic| %>
+<% if mosaic.pictures.first %>
+<li>
+<%= link_to image_tag(mosaic.pictures.first.image.url), mosaic_path(mosaic) %>
+            	<% else %>
+              		N/A
+            	<% end %>
+<a href="<%=mosaic_path(mosaic)%>">
+<p><%=mosaic.name%></p><br>
+<% if logged_in? %>
+<p><%=link_to 'Edit', edit_mosaic_path(mosaic) %></p>
+<p><%=link_to "Delete", mosaic_path(mosaic), :method => :delete %></p>
+<% end %>
+</li>
+<% end %>
+</ul>
+</td>
+</tr>
 </table>
-
 
 
 
