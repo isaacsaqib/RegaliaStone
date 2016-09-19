@@ -1,6 +1,7 @@
-<title>Regalia Stone | Quartz, Tiles, Mosaics</title>
-<meta name="description" content="Quality and certified Quarts, Tiles and Mosaics made in Italy. Open to retailers and fabricators alike. Contact us today for more information.  ">
-
+<head>
+	<title>Regalia Stone | Quartz, Tiles, Mosaics</title>
+	<meta name="description" content="Quality and certified Quarts, Tiles and Mosaics made in Italy. Open to retailers and fabricators alike. Contact us today for more information.  ">
+</head>
 <% if logged_in? %>
  <a class="links" href="/logout"> Logout</a>
 <% end %>
@@ -11,7 +12,7 @@
 	<!-- Box containing logo -->
 <div id="header"> 
 
-		<a href="#" onClick="window.location.reload();return false;"><img src="assets/logo.jpg" id= "logo"></a>
+		<a href="#" onClick="window.location.reload();return false;"><img src="assets/logo.jpg" alt="regaliastonelogo" id= "logo"></a>
 	<ul id="nav">	
 		<li><a>STONE</a></li>	
 		<li><a>TILE</a></li>	
@@ -54,11 +55,11 @@
    <div id="slides" class="hide">
 
 
-  	<img src="assets/SLIDE1-a06e7c38f13052b8a277ad658a201257ba4ff17be4cdeea1e32f32d96031c93a.jpg">
-  	<img src="assets/SLIDE2-d6fdd4b7c28d86c3a5859f3ad14fd8842f916ed824221b5c77b24ca5e5ed2699.jpg">
-  	<img src="assets/SLIDE3.jpg">
+  	<img alt="kitchen_quarts_image" src="assets/SLIDE1-a06e7c38f13052b8a277ad658a201257ba4ff17be4cdeea1e32f32d96031c93a.jpg">
+  	<img alt="margary_gray_quarts_slab" src="assets/SLIDE2-d6fdd4b7c28d86c3a5859f3ad14fd8842f916ed824221b5c77b24ca5e5ed2699.jpg">
+  	<img alt="outdoor_duno_sands_image" src="assets/SLIDE3.jpg">
   	<!-- <img src="assets/SLIDE4-7f9d14d64e712db62d3385824c21c2327a59c3c4b40d11a0b9b4e82ad3d5d731.jpg"> -->
-  	<img src="assets/SLIDE5.jpg">
+  	<img alt="duno_sands_office_image" src="assets/SLIDE5.jpg">
 
   
   	<!-- <img src="assets/slide3.JPG"> -->
@@ -170,7 +171,7 @@
 
 
 
-<img id="tile-header-picture" class="hide" src="assets/image-827d4ee5d76e7f8012f7aaeda995c4b58c81e531f5400b64533942b68a02239c.jpg">
+<img id="tile-header-picture" alt="tile_header_picture" class="hide" src="assets/image-827d4ee5d76e7f8012f7aaeda995c4b58c81e531f5400b64533942b68a02239c.jpg">
 
 <div id="tile-header" class="hide">
 	<p>Duno Sands is a special porcelain tile manufactured at 1200° F creating a homogenous body tile. The tile is then calibrated, semi-polished (Lappato) and rectified, permitting installation at 1/16th” tight grout joint. Therefore creating a very pleasant and practical aesthetic look.
@@ -196,6 +197,7 @@
 					<a href="<%=tile_path(tile)%>">
 
 							<p><%=tile.name%></p><br>
+							</a>
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_tile_path(tile) %></p>
 							<p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>			
@@ -222,6 +224,7 @@
 <a href="<%=tile_path(tile)%>">
 
 <p><%=tile.name%></p><br>
+</a>
 <% if logged_in? %>
 <p><%=link_to 'Edit', edit_tile_path(tile) %></p>
 <p><%=link_to "Delete", tile_path(tile), :method => :delete %></p>
@@ -267,6 +270,7 @@
 					<a href="<%=quart_path(quart)%>">
 
 							<p><%=quart.name%></p><br>
+					</a>
 							 <% if logged_in? %>
 							<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 							<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>			
@@ -294,6 +298,7 @@
 
 		<a href="<%=quart_path(quart)%>">
 		<p><%=quart.name%></p><br>
+		</a>
 		<% if logged_in? %>
 		<p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 		<p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
@@ -320,6 +325,7 @@
             	<% end %>
 <a href="<%=quart_path(quart)%>">
 <p><%=quart.name%></p><br>
+</a>
 <% if logged_in? %>
 <p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 <p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
@@ -346,6 +352,7 @@
             	<% end %>
 <a href="<%=quart_path(quart)%>">
 <p><%=quart.name%></p><br>
+</a>
 <% if logged_in? %>
 <p><%=link_to 'Edit', edit_quart_path(quart) %></p>
 <p><%=link_to "Delete", quart_path(quart), :method => :delete %></p>
@@ -372,6 +379,7 @@
             	<% end %>
 <a href="<%=mosaic_path(mosaic)%>">
 <p><%=mosaic.name%></p><br>
+</a>
 <% if logged_in? %>
 <p><%=link_to 'Edit', edit_mosaic_path(mosaic) %></p>
 <p><%=link_to "Delete", mosaic_path(mosaic), :method => :delete %></p>
@@ -388,7 +396,7 @@
 
 
 
-<img style="display:block;width:60%;margin:0 auto;" id="certifications" src="assets/warranty.png">
+<img style="display:block;width:60%;margin:0 auto;" alt="certifications" id="certifications" src="assets/warranty.png">
 
 <!-- Care And Maintainence -->
 
